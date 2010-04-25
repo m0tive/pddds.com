@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.clr {
+    display: block;
+    clear: both;
+}
+
+body {
+    background:#1a1a1a;
+    font:16px "Microsoft Sans Serif",Helvetic,Arial,sans-serif;
+    margin:0;
+    padding:1.25em 0
+}
+
+code, pre {
+    font-family: monospace;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.7em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: #a02c2c;
+    text-decoration: none
+}
+
+
+#container {
+    background:#fff;
+    margin: 0 auto;
+    width: 960px
+}
+
+
+header h1 {
+    display: none
+}
+
+header hr {
+    clear: both
+}
+
+nav .wrapper {
+    margin: 0 15px 10px;
+    padding: 10px 0 0;
+}
+
+nav li {
+    float: left;
+    position: relative;
+    padding: 5px
+}
+
+nav a {
+    display: block;
+    padding: 4px 10px 6px;
+    font-size: 16px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+
+nav a:hover {
+    border-color: #333;
+    color: #333
+}
+
+nav .active a {
+    background: #333;
+    border: 0;
+    padding: 5px 11px 7px;
+    color:#fff
+}
+
+nav .active a:hover {
+    background: #666
+}
