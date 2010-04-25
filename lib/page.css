@@ -1,0 +1,14 @@
+article {
+    margin-left: 40px
+}
+
+article header {
+    margin-top: 45px;
+    margin-bottom: 22px;
+}
+
+article p {
+    width: 600px;
+    color: #333;
+    margin: 10px 0 20px;
+}

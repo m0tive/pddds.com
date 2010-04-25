@@ -1,0 +1,20 @@
+---
+layout: page
+tab: about
+title: About
+---
+This is the personal website of *Peter Dodds*. There's "a portfolio":/work.html of his work, some "free code snippets":/code.html, and a few "short articles":/blog.html.
+
+h3. The Author
+
+Peter Dodds is a UK based programmer working in computer graphics, graphic design and games.
+
+He has been maintaining a website -- to varying degrees -- since 2001.
+
+h3. The Website
+
+*pddds.com* has been created from scratch using vim, "jekyll":http://jekyllrb.com, HTML5, css3, and a little bit of javascript. It was developed for Firefox, but is compatible with most modern browsers.
+
+h3. Contact
+
+If you want to get in touch, email peter@pddds.com

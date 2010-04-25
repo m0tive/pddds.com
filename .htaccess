@@ -1,0 +1,23 @@
+# Deny access to directory listing and Follow symbolic links
+
+Options -Indexes +SymLinksIfOwnerMatch
+DirectoryIndex index.html index.htm index.php
+IndexIgnore *
+
+# Redirect errors to a custom page
+
+ErrorDocument 404 /404.html
+
+# Rewrites...
+
+RewriteEngine On
+
+# Redirect links to downloads from other domains
+
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?appden\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteRule ^(.*)/[^/]+\.(pkg|dmg|zip)$ $1/ [R,NC,L]
+
+# Prevent accessing hidden files
+
+RewriteRule ^(.*/)?\. - [F,NS,L]

@@ -1,0 +1,30 @@
+
+.home {
+    margin-left: 40px
+}
+
+header.home {
+    margin-top: 45px;
+    margin-bottom: 22px;
+}
+
+header.home h2 {
+    float: left;
+    font-size: 30px
+}
+
+header.home .subheading {
+    /*display: block;*/
+    float: left;
+    font-size: 30px;
+    color:#ccc;
+    padding-left: 0.5em
+}
+
+#intro.home p {
+    width: 600px;
+    font-size: 24px;
+    line-height: 1.1em;
+    margin: 20px 0 35px
+}
+

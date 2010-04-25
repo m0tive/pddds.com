@@ -1,0 +1,34 @@
+<article class="entry">
+    <header>
+        <h2>
+            {% if detail %}
+                {{ post.title }}
+            {% else %}
+                <a href="{{ post.url }}" rel="bookmark" 
+                    title="Premalink to {{ post.title }}">{{ post.title }}</a>
+            {% endif %}
+        </h2>
+        {% unless nodate %}
+        <abbr class="published" title="{{ post.date }}">
+            {{ post.date | date:'%b %d %Yi' }}
+        </abbr>
+        {% endunless %}
+        <span class="clr"></span>
+    </header>
+
+    <div class="entry-content">
+        {% if detail %}
+            {{ content }}
+        {% else %}
+            {{ post.content }}
+        {% endif %}
+    </div>
+
+    {% unless nofooter %}
+    <hr \>
+
+    <footer>
+        Nothin in the footer
+    </footer>
+    {% endunless %}
+</article>

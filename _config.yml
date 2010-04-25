@@ -7,11 +7,13 @@ nav:
     - name: pddds
       url: /
     - name: about
-      url: /about
+      url: /about.html
     - name: work
-      url: /work
+      url: /work.html
+    - name: code
+      url: /code.html
     - name: blog
-      url: /blog
+      url: /blog.html
 
 css:
-    - /css/main.css
+    - /lib/main.css
