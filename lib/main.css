@@ -22,7 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     background:#1a1a1a;
-    font:16px "Microsoft Sans Serif",Helvetic,Arial,sans-serif;
+    font:16px "Microsoft Sans Serif",Helvetica,Arial,sans-serif;
     margin:0;
     padding:1.25em 0
 }
@@ -93,18 +93,21 @@ h2 a, h3 a, h4 a {
 }
 
 h2 {
-    font-size: 33px
+    font-size: 35px
 }
 
 h3 {
-    font-size: 20px;
-    margin: 30px 0 10px
+    font-size: 22px;
+    margin: 30px 0 10px;
+}
+
+h4 {
+    font-size: 18px;
 }
 
 #container {
     background:#fff;
     margin: 0 auto;
-    padding-bottom: 20px;
     width: 960px
 }
 
@@ -114,7 +117,7 @@ h3 {
 }
 
 
-header h1 {
+header.body h1 {
     display: none
 }
 
@@ -159,6 +162,27 @@ nav .active a:hover {
 #content {
     display: block;
     margin-top: 25px;
-    margin-bottom: 30px
+    margin-bottom: 50px
+}
+
+footer.body hr {
+    margin-bottom: 0
+}
+
+footer.body #copyright {
+    padding-left: 40px;
+    margin: 25px 0 30px;
+    float: left
+}
+
+footer.body .exit {
+    padding-right: 40px;
+    margin: 25px 0 30px;
+    float: right
+}
+
+footer.body p {
+    font-size: 12px;
+    color: #b3b3b3;
 }
 

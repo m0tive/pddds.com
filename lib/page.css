@@ -1,5 +1,6 @@
 article {
-    margin-left: 40px
+    margin-left: 40px;
+    margin-right: 40px
 }
 
 article header {
@@ -10,5 +11,5 @@ article header {
 article p {
     width: 600px;
     color: #333;
-    margin: 10px 0 20px;
+    margin: 5px 0 20px;
 }

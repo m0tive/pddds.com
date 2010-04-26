@@ -2,7 +2,7 @@
 layout: base
 ---
 <header id="banner" class="body">
-    <h1><a href="#">pddds.com</a></h1>
+    <h1>pddds.com</h1>
     {% include nav.html %}
     <hr />
 </header>
@@ -10,4 +10,14 @@ layout: base
     {{ content }}
 </section> <!-- /#content -->
 <footer id="contentinfo" class="body">
+    <hr />
+    <div id="copyright">
+        {% for line in site.copyright %}
+            <p>{{ line }}</p>
+        {% endfor %}
+    </div>
+    <div class="exit">
+        <p>The future is now.</p>
+    </div>
+    <span class="clr"></span>
 </footer>
