@@ -1,0 +1,13 @@
+<ol class="post-list">
+    {% for post in site.posts %}
+    <li>
+        <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: '%B %d, %Y' }}
+        </abbr>
+        <span class="title"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+            {{ post.title }}
+        </a></span>
+        <span class="clr"></span>
+    </li>
+    {% endfor %}
+</ol>
