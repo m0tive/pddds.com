@@ -1,4 +1,4 @@
-permalink: /:categories/:title
+permalink: /blog/:categories/:title
 
 title: pddds
 url: http://pddds.com

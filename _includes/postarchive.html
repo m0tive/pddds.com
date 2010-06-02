@@ -1,5 +1,6 @@
+{% if postcount %}
 <ol class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit: postcount %}
     <li>
         <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: '%B %d, %Y' }}
@@ -11,3 +12,6 @@
     </li>
     {% endfor %}
 </ol>
+{% else %}
+<span class="jekyll-warning">no postcount set for postarchive.html</span>
+{% endif %}
