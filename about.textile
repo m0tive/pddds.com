@@ -3,6 +3,7 @@ layout: page
 tab: about
 title: About
 ---
+
 This is the personal website of *Peter Dodds*. There's "a portfolio":/work.html of his work, some "free code snippets":/code.html, and a few "short articles":/blog.html.
 
 h3. The Author

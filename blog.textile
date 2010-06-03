@@ -1,6 +1,9 @@
 ---
 layout: page
 tab: blog
-css: /css/page.css
-title: Under Construction
+title: Blog
 ---
+
+{% assign postcount = 3 %}
+{% include postarchive.html %}
+

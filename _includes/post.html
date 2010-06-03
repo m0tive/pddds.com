@@ -1,13 +1,10 @@
 <article class="entry">
     <header>
-        <h2>
-            {% if detail %}
-                {{ post.title }}
-            {% else %}
-                <a href="{{ post.url }}" rel="bookmark" 
-                    title="Premalink to {{ post.title }}">{{ post.title }}</a>
-            {% endif %}
-        </h2>
+        {% if detail %}
+        <h2>{{ post.title }}</h2>
+        {% else %}
+        <h3><a href="{{ post.url }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
+        {% endif %}
         {% unless nodate %}
         <abbr class="published" title="{{ post.date }}">
             {{ post.date | date:'%b %d %Yi' }}
@@ -25,10 +22,8 @@
     </div>
 
     {% unless nofooter %}
-    <hr \>
-
     <footer>
-        Nothin in the footer
+        Nothing in the footer
     </footer>
     {% endunless %}
 </article>

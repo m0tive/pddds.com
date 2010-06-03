@@ -1,0 +1,46 @@
+---
+layout: default
+tab: pddds
+css: /lib/index.css
+---
+<header class="home">
+h2. Peter Dodds
+
+p(subheading). programming | art | design
+
+p(clr). 
+</header>
+
+
+<section id="intro" class="home">
+
+I'm a Uk computer graphics programmer and designer. When I'm working I like C++, python, shell scripting and "vim":http://en.wikipedia.org/wiki/Vim_(text_editor). The rest of the time I play with graphic / web design, "Processing":http://processing.org and illustration.
+
+</section>
+
+<section id="video" class="home">
+{% include galleryframe.html %}
+<div>Video Goes Here</div>
+
+<footer>
+h3. Video Title
+
+<abbr class="video-date">Video date</abbr>
+
+This video is a short video of vid-e-o
+
+"See more work...":/work.html
+
+</footer>
+
+</section>
+
+---
+
+<section id="blog" class="home">
+{% assign postcount = 3 %}
+{% include postarchive.html %}
+
+"More blog entries":/blogarchive.html
+
+</section>
