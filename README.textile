@@ -1,0 +1,13 @@
+h1. pddds.com
+
+This is the "jekyll":http://jekyllrb.com source for "pddds.com":http://pddds.com, Peter Dodds' personal website.
+
+h2. Licence
+
+The following directories and their contents copyright &copy; Peter Dodds:
+
+* _posts/
+* lib/images
+
+Everything else is MIT Licensed. Attribution is always appreciated.
+
