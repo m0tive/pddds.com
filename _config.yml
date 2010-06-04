@@ -20,3 +20,5 @@ css:
 
 copyright:
     - "Copyright &copy; 2001&ndash;10 <a href=\"mailto:peter+at+pddds+com\">Peter Dodds</a>."
+
+exclude: README.textile

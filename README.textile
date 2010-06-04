@@ -11,3 +11,6 @@ The following directories and their contents copyright &copy; Peter Dodds:
 
 Everything else is MIT Licensed. Attribution is always appreciated.
 
+h2. Notes
+
+When starting, some parts of the jekyll code was sourced from Scott Kyle's "AppDen sourcecode":http://github.com/appden/appden.github.com
