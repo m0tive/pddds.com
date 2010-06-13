@@ -1,0 +1,22 @@
+#archivelatest .entry-content p {
+    font-size: 12px;
+    color: #666
+}
+
+#archivelatest article {
+    margin: 0;
+}
+
+#archivelatest .entry-content {
+    padding-left: 160px;
+}
+
+abbr.published {
+    display: block;
+    float: left;
+    font-size: 12px;
+    color: #999;
+    padding-top: 10px;
+    width: 160px;
+}
+

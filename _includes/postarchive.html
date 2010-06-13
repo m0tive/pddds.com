@@ -1,11 +1,14 @@
 {% if postcount %}
+{% unless postoffset %}
+    {% assign postoffset = 0 %}
+{% endunless %}
 <ol class="post-list">
-    {% for post in site.posts limit: postcount %}
+    {% for post in site.posts limit: postcount offset: postoffset %}
     <li>
         <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: '%B %d, %Y' }}
         </abbr>
-        <span class="title"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">
+        <span class="title"><a href="{{ post.url | remove:'.html'}}" rel="bookmark" title="{{ post.title }}">
             {{ post.title }}
         </a></span>
         <span class="clr"></span>

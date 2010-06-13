@@ -1,15 +1,20 @@
 <article class="entry">
     <header>
         {% if detail %}
-        <h2>{{ post.title }}</h2>
+            <h2>{{ post.title }}</h2>
+            {% unless nodate %}
+            <abbr class="published" title="{{ post.date }}">
+                {{ post.date | date:'%b %d %Y' }}
+            </abbr>
+            {% endunless %}
         {% else %}
-        <h3><a href="{{ post.url }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
+            {% unless nodate %}
+            <abbr class="published" title="{{ post.date }}">
+                {{ post.date | date:'%b %d %Y' }}
+            </abbr>
+            {% endunless %}
+            <h3><a href="{{ post.url | remove:'.html' }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
         {% endif %}
-        {% unless nodate %}
-        <abbr class="published" title="{{ post.date }}">
-            {{ post.date | date:'%b %d %Yi' }}
-        </abbr>
-        {% endunless %}
         <span class="clr"></span>
     </header>
 
@@ -17,7 +22,14 @@
         {% if detail %}
             {{ content }}
         {% else %}
-            {{ post.content }}
+            {% if truncateby %}
+            {{ post.content | truncatewords: truncateby }}
+            <p class="readmore">
+                <a href="{{ post.url | remove:'.html' }}">Continue reading</a>
+            </p>
+            {% else %}
+                {{ post.content }}
+            {% endif %}
         {% endif %}
     </div>
 

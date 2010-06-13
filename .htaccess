@@ -6,7 +6,8 @@ IndexIgnore *
 
 # Redirect errors to a custom page
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404
+ErrorDocument 403 /403
 
 # Rewrites...
 
@@ -14,10 +15,12 @@ RewriteEngine On
 
 # Redirect links to downloads from other domains
 
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?appden\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?pddds\.com/ [NC]
 RewriteCond %{HTTP_REFERER} !^$
 RewriteRule ^(.*)/[^/]+\.(pkg|dmg|zip)$ $1/ [R,NC,L]
 
 # Prevent accessing hidden files
 
 RewriteRule ^(.*/)?\. - [F,NS,L]
+
+RewriteRule ^(.*/)*([a-zA-Z0-9\-]+)/?$ $1$2.html [L]

@@ -1,7 +1,8 @@
 ---
 layout: default
 tab: pddds
-css: /lib/index.css
+css:
+    - /lib/index.css
 ---
 <header class="home">
 h2. Peter Dodds
