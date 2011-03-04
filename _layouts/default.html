@@ -1,30 +1,22 @@
 ---
 layout: base
 ---
-<header id="banner" class="body">
-<h1>{{ site.title }}</h1>
-    {% if site.subtitle %}
-    <p>{{ site.subtitle }}</p>
-    {% endif %}
-    {% if site.nav %}
-    {% include nav.html %}
-    {% endif %}
-    <hr />
-</header>
+    <header id="banner" class="body">
+        <h1>{{ site.title }}</h1>{% if site.subtitle %}
+        <p>{{ site.subtitle }}</p>{% endif %}{% if site.nav %}
+{% include nav.html %}{% endif %}
+        <hr />
+    </header>
 
-<section id="content" class="body">
-    {{ content }}
-</section> <!-- /#content -->
+    <section id="content" class="body">
+{{ content }}
+    </section> <!-- /#content -->
 
-<footer id="contentinfo" class="body">
-    <hr />
-    {% if site.copyright %}
-    <div id="copyright">
-        {% for line in site.copyright %}
-            <p>{{ line }}</p>
-        {% endfor %}
-    </div>
-    {% endif %}
-    <span class="clr"></span>
-</footer>
+    <footer id="contentinfo" class="body">
+        <hr />{% if site.copyright %}
+        <div id="copyright">{% for line in site.copyright %}
+              <p>{{ line }}</p>{% endfor %}
+        </div>{% endif %}
+        <span class="clr"></span>
+    </footer>
 
