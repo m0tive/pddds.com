@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title | downcase }} | {% endif %}{{ site.title }}</title>
-{% for css in site.css %}    <link rel="stylesheet" href="{{ css }}" type="text/css" />
-{% endfor %}{% for css in page.css %}    <link rel="stylesheet" href="{{ css }}" type="text/css" />
-{% endfor %}
-    <!--[if ie]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-        </script>
-    <![endif]-->
-    <!--[if lte ie 7]>
-        <script src="js/ie8.js" type="text/javascript"></script>
-    <![endif]-->
-    <!--[if lt ie 7]>
-        <link rel="stylesheet" type="text/css" media="all" href="css/ie6.css" />
-    <![endif]-->
+    <title>
+        {% if page.title %}{{ page.title | downcase }} | {% endif %}{% if site.title %}{{ site.title }}{% else %}missing site.title{% endif %}
+    </title>
 
+{% include head-meta.html %}
+{% include head-link.html %}
 </head>
+
 <body>
+{% unless site.url %}missing site.url{% endunless %}
+{% unless site.title %}missing site.title{% endunless %}
+{% unless site.author %}missing site.author{% endunless %}
+{% unless site.email %}missing site.email{% endunless %}
     <div id="container">
 {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
     </div> <!-- /#container -->

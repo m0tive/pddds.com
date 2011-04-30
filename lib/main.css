@@ -21,8 +21,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 body {
-    background:#1a1a1a;
-    font:16px "Microsoft Sans Serif",Helvetica,Arial,sans-serif;
+    /*background:#1a1a1a;*/
+    font:16px Helvetica,Arial,sans-serif;
     margin:0;
     padding:1.25em 0
 }
@@ -88,10 +88,11 @@ h1, h2, h3, h4 {
     text-decoration: none;
 }
 
-h2 a, h3 a, h4 a {
+h1 a, h2 a, h3 a, h4 a {
     color: #000
 }
 
+/*
 h2 {
     font-size: 35px
 }
@@ -205,4 +206,4 @@ footer.body p {
     font-size: 12px;
     color: #b3b3b3;
 }
-
+*/
