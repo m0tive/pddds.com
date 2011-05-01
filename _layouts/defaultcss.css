@@ -32,13 +32,14 @@ h6 {font-size:0.9em}
 
 h1,h2,h3,h4,h5{margin:1em 0 0.3em}
 
-p{margin:0.3em 0 0.5em}
+p{margin:0.3em 0 0.5em; line-height:1.3em}
 
 ol, ul {margin:0 0 1em 2em}
 
 hr {border-color: #333; border-style: dashed}
 
-footer p {font-size:0.8em; color:#666}
+{% include site-header.css %}
+{% include site-footer.css %}
 
 #container {margin:0 auto;width:32.5em}
 

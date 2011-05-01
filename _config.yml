@@ -1,7 +1,7 @@
 permalink: /blog/:categories/:title.html
 
 title: pddds
-subtitle: "Peter Dodds' website"
+subtitle: "not dead yet"
 url: http://pddds.com
 author: Peter Dodds
 email: "peter+at+pddds+com"
@@ -9,9 +9,5 @@ email: "peter+at+pddds+com"
 nav:
     - name: home
       url: /
-    - name: about
-      url: /about.html
-    - name: archive
-      url: /archive.html
 
 exclude: README.md
