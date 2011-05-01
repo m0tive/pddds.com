@@ -3,15 +3,19 @@ layout: default
 tab: home
 ---
 
-foobar
-------
+This is a site belonging to {{ site.author }}.
 
-a paragraph
+There isn't much here now, but soon there will be.
 
-* list1
-* list2
+Blog
+----
 
-<!--
-{% assign postcount = 3 %}
+{% assign postcount = 10 %}
 {% include postarchive.html %}
--->
+
+### subsub
+pictures
+
+#### final level
+##### fifth
+###### sixsasfaf

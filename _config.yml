@@ -1,6 +1,7 @@
 permalink: /blog/:categories/:title.html
 
 title: pddds
+subtitle: "Peter Dodds' website"
 url: http://pddds.com
 author: Peter Dodds
 email: "peter+at+pddds+com"

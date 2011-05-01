@@ -1,26 +1,45 @@
 ---
 layout: resetcss
 ---
-/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
-body {font: 13px Helmet, Freesans, sans-serif;}
-
 /* using local fonts? make sure to read up on Paul Irish's
 	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 
 /* we like off-black for text */
 body, select, input, textarea {color: #333;}
 
-a {color: #03f;}
-a:hover {color: #69f;}
+a {color: #fff;background:#444;padding:1px 2px;text-decoration:none}
+a:hover {color:inherit;background:inherit}
 
+{% assign selbg = "#fcd700" %}
+{% assign selcolor = "#fff" %}
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;}
+::-moz-selection{background:{{ selbg }};color:{{ selcolor }};text-shadow:none;}
+::selection {background:{{ selbg }};color:{{ selcolor }};text-shadow:none;}
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;}
+a:link {-webkit-tap-highlight-color:{{ selbg }};}
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color:{{ selbg }};color:{{ selcolor }}; text-decoration: none;}
+mark {background-color:{{ selbg }};color:{{ selcolor }}; font-style: italic;
+	font-weight: bold;}
+
+h1 {font-size:1.6em}
+h2,h3,h4 {font-size:1.2em}
+h3,h5,h6 {font-style:italic}
+h4,h5 {font-weight:normal}
+h5 {font-size:1.1em}
+h6 {font-size:0.9em}
+
+h1,h2,h3,h4,h5{margin:1em 0 0.3em}
+
+p{margin:0.3em 0 0.5em}
+
+ol, ul {margin:0 0 1em 2em}
+
+hr {border-color: #333; border-style: dashed}
+
+footer p {font-size:0.8em; color:#666}
+
+#container {margin:0 auto;width:32.5em}
 
 {{ content }}
