@@ -18,10 +18,13 @@ Notes
 
 When starting, some parts of the jekyll code was sourced from Scott Kyle's [AppDen sourcecode][appden].
 
-Quite a few ideas also came from Vito Botta's article ["Migrating from Wordpress to Jekyll - Part 2"][vitobotta], and the rss and atom templates came from [coyled][].
+Some ideas came from Vito Botta's article ["Migrating from Wordpress to Jekyll - Part 2"][vitobotta], and the rss and atom templates came from [coyled][].
+
+Also, this uses a edited version of [html5reset][].
 
 [jekyll]: http://jekyllrb.com
 [pddds.com]: http://pddds.com
 [appden]: http://github.com/appden/appden.github.com
 [vitobotta]: http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ "Migrating from Wordpress to Jekyll - Part 2: **Everything** you need to know about Jekyll"
 [coyled]: http://coyled.com/2010/07/05/jekyll-templates-for-atom-rss/ "coyled.com > Jekyll Templates for Atom, RSS"
+[html5reset]: http://html5reset.org/ "HTML5 Reset"

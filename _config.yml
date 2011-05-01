@@ -6,21 +6,11 @@ author: Peter Dodds
 email: "peter+at+pddds+com"
 
 nav:
-    - name: pddds
+    - name: home
       url: /
     - name: about
-      url: /about/
-    - name: work
-      url: /work/
-    - name: code
-      url: /code/
-    - name: blog
-      url: /blog/
-
-css:
-    - /lib/main.css
-
-copyright:
-    - "Copyright &copy; 2001&ndash;10 <a href=\"mailto:peter+at+pddds+com\">Peter Dodds</a>."
+      url: /about.html
+    - name: archive
+      url: /archive.html
 
 exclude: README.md

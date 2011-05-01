@@ -1,0 +1,11 @@
+<!-- include site-nav -->
+<nav id="sitenav"><div class="wrapper">
+<ol>{% for item in site.nav %}
+    <li class="{% if item.name != page.tab %}in{% endif %}active"><a{% if item.url %} href="{{ item.url}}"{% endif %}>{{ item.name }}</a>{% if item.subnav %}
+        <ul>{% for subitem in item.subnav %}
+            <li><a{% if subitem.url %} href="{{ subitem.url}}"{% endif %}>{{ subitem.name }}</a>{% endfor %}
+        </ul>{% endif %}{% endfor %}
+</ol>
+<span class="clr"></span>
+</div></nav>
+<!-- /include site-nav -->

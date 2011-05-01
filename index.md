@@ -1,11 +1,17 @@
 ---
-layout: base
-description: "Peter Dodds' website about stuff he does"
-robots: "noodp, noydir"
+layout: default
+tab: home
 ---
 
-pddds.com
-=========
+foobar
+------
 
-The personal website of Peter Dodds
+a paragraph
 
+* list1
+* list2
+
+<!--
+{% assign postcount = 3 %}
+{% include postarchive.html %}
+-->
