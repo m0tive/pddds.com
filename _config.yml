@@ -10,4 +10,10 @@ nav:
     - name: home
       url: /
 
+links:
+    - name: github.com/m0tive
+      url: "https://github.com/m0tive"
+    - name: twitter.com/m0tive
+      url: "http://twitter.com/m0tive"
+
 exclude: README.md

@@ -1,5 +1,10 @@
 <footer id="contentinfo" class="body">
-    <hr />
+    <hr />{% if site.links %}
+    <div id="links">
+        <ul>{% for item in site.links %}
+            <li><a href="{{ item.url}}">{% if item.name %}{{ item.name }}{% else %}{{ item.url }}{% endif %}</a>{% endfor %}
+        </ul>
+    </div>{% endif %}
     <div id="copyright">
         <p>Copyright &copy; <a href="mailto:{{ site.email }}">{{ site.author }}</a> {{ site.time | date: "%Y" }}. All Rights Reserved.
     </div>

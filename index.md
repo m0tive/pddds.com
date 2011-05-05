@@ -5,7 +5,9 @@ tab: home
 
 Peter Dodds
 -----------
-Software developer and design enthusiast. Once started a web dev company with [a friend][bell], with [mixed results][hoptic]. Currently he works on 3D software and a couple of [other things][github].
+Software developer and design enthusiast. Once started a web dev company with [a
+friend][bell], with [mixed results][hoptic]. Currently he works on 3D software
+and a couple of [other things][github].
 
 He likes to share things if your willing to [listen][twitter].
 
@@ -17,6 +19,8 @@ He likes to share things if your willing to [listen][twitter].
 ~
 -
 
+<!-- not done yet, come back later
+
 <ol class="post-list">{% for post in site.posts %}
     <li>
         <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
@@ -26,3 +30,5 @@ He likes to share things if your willing to [listen][twitter].
         <span class="clr"></span>
     </li>{% endfor %}
 </ol>
+
+-->
