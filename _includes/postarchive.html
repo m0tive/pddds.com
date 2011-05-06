@@ -2,7 +2,7 @@
 {% unless postoffset %}
     {% assign postoffset = 0 %}
 {% endunless %}
-<ol class="post-list">
+<ol class="post-archive">
     {% for post in site.posts limit: postcount offset: postoffset %}
     <li>
         <abbr class="published" title="{{ post.date | date_to_xmlschema }}">

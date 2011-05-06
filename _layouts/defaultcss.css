@@ -44,4 +44,8 @@ hr {border-color: #333; border-style: dashed}
 
 #container {margin:0 auto;width:32.5em}
 
+ol.post-archive { margin-left:0}
+ol.post-archive li { list-style: none; }
+abbr.published{border:0;color:#666}
+
 {{ content }}

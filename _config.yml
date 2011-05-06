@@ -11,9 +11,11 @@ nav:
       url: /
 
 links:
-    - name: github.com/m0tive
+    - name: github
       url: "https://github.com/m0tive"
-    - name: twitter.com/m0tive
+    - name: twitter
       url: "http://twitter.com/m0tive"
+    - name: "peter+at+pddds+com"
+      url: "mailto:peter+at+pddds+com"
 
 exclude: README.md
