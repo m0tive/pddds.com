@@ -5,4 +5,6 @@ category: offtopic
 date: 2011-05-01 18:34:09
 ---
 
-The end of the beginning. A new blog is born. Hello world, hear my noise.
+Just more [noise][1].
+
+[1]:https://secure.wikimedia.org/wikipedia/en/wiki/Signal-to-noise_ratio "Signal-to-noise"

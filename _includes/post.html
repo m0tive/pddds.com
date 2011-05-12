@@ -13,7 +13,7 @@
                 {{ post.date | date:'%b %d %Y' }}
             </abbr>
             {% endunless %}
-            <h3><a href="{{ post.url | remove:'.html' }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
+            <h3><a href="{{ post.url }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
         {% endif %}
         <span class="clr"></span>
     </header>
@@ -25,7 +25,7 @@
             {% if truncateby %}
             {{ post.content | truncatewords: truncateby }}
             <p class="readmore">
-                <a href="{{ post.url | remove:'.html' }}">Continue reading</a>
+                <a href="{{ post.url }}">Continue reading</a>
             </p>
             {% else %}
                 {{ post.content }}
@@ -35,7 +35,7 @@
 
     {% unless nofooter %}
     <footer>
-        Nothing in the footer
+        <!-- comments, author details... other stuff -->
     </footer>
     {% endunless %}
 </article>

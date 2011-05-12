@@ -17,7 +17,7 @@ and a couple of [other things][github].
 ~
 -
 
-<!-- not done yet, come back later -->
+<!-- not done yet, come back later
 
 <ol class="post-archive">{% for post in site.posts %}
     <li>
@@ -29,4 +29,4 @@ and a couple of [other things][github].
     </li>{% endfor %}
 </ol>
 
-<!-- -->
+-->
