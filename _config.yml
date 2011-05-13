@@ -18,4 +18,4 @@ links:
     - name: "peter+at+pddds+com"
       url: "mailto:peter+at+pddds+com"
 
-exclude: README.md
+exclude: README.md clean.sh

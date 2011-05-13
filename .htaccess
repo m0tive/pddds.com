@@ -1,7 +1,7 @@
 # Deny access to directory listing and Follow symbolic links
 
 Options -Indexes +SymLinksIfOwnerMatch
-DirectoryIndex index.html index.htm index.php
+DirectoryIndex index.html
 IndexIgnore *
 
 # Redirect errors to a custom page
@@ -20,7 +20,6 @@ RewriteCond %{HTTP_REFERER} !^$
 RewriteRule ^(.*)/[^/]+\.(pkg|dmg|zip)$ $1/ [R,NC,L]
 
 # Prevent accessing hidden files
-
 RewriteRule ^(.*/)?\. - [F,NS,L]
 
 RewriteRule ^(.*/)*([a-zA-Z0-9\-]+)/?$ $1$2.html [L]
