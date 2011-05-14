@@ -9,6 +9,8 @@ IndexIgnore *
 ErrorDocument 404 /404
 ErrorDocument 403 /403
 
+Redirect 301 /cv http://careers.stackoverflow.com/pd
+
 # Rewrites...
 
 RewriteEngine On
