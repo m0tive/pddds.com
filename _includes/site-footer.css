@@ -1,4 +1,5 @@
 footer p, footer li {font-size:0.8em; color:#666; line-height: 1.5em}
-footer #links ul{ margin-left:0 }
+footer #links ul{ margin-left:0; padding: 0; text-indent:0 }
 footer #links li{ margin:0; float:left; padding-right:0.5em }
+footer li:before {content: none; padding: 0}
 footer a{ color:inherit; background:inherit}

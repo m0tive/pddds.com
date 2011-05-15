@@ -17,8 +17,6 @@ and a couple of [other things][github].
 ~
 -
 
-<!-- not done yet, come back later
-
 <ol class="post-archive">{% for post in site.posts %}
     <li>
         <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
@@ -28,5 +26,3 @@ and a couple of [other things][github].
         <span class="clearfix"></span>
     </li>{% endfor %}
 </ol>
-
--->

@@ -2,12 +2,12 @@
     <header>
         {% if detail %}
             <h2>{{ post.title }}</h2>{% if post.subtitle %}
-            <div class="subtitle">{{ post.subtitle }}</div>{% endif %}
-            {% unless nodate %}
+            <div class="subtitle">{{ post.subtitle }}</div>{% endif %}{% unless nodate %}
             <abbr class="published" title="{{ post.date }}">
                 {{ post.date | date:'%b %d %Y' }}
-            </abbr>
-            {% endunless %}
+            </abbr>{% endunless %}{% unless noauthor%}
+            <span class="author">{% unless nodate %} ~ {% endunless %}
+            by {{ post.author }}</span>{% endunless %}
         {% else %}
             {% unless nodate %}
             <abbr class="published" title="{{ post.date }}">

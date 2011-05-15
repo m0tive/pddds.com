@@ -35,9 +35,20 @@ h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit;background:inherit}
 
 p{margin:0.3em 0 0.7em; line-height:1.3em}
 
-ol, ul {margin:0 0 1em 2em}
+ol{margin:0 0 1em 2em}
+ul {margin:0 0 1em; padding-left:1.9em; text-indent: -1em}
+ul li:before { content: '-'; padding-right: 0.9em}
 
 hr {border-color: #333; border-style: dashed}
+
+pre, code, kbd, samp {font-family: "Bitstream Vera Sans Mono", Monaco, monospace, sans-serif}
+
+pre { margin:1em; font-size: 0.75em; white-space: pre-wrap }
+
+pre code { border: 1px solid #eee; display: block; padding: 1em }
+p code { font-size: 0.9em; padding:2px 1px; background: #eee; border: 1px solid #ddd}
+
+{% include desert-code.css %}
 
 {% include site-header.css %}
 {% include site-footer.css %}
@@ -46,6 +57,8 @@ hr {border-color: #333; border-style: dashed}
 
 ol.post-archive { margin-left:0}
 ol.post-archive li { list-style: none; }
-abbr.published{border:0;color:#666}
+abbr.published, header .author{border:0;color:#666}
+header .subtitle{ margin:0 0 0.3em; font-size: 0.75em; color: #666; font-style:italic}
+.entry abbr.published, .entry header .author{font-size:0.75em}
 
 {{ content }}

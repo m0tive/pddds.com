@@ -1,0 +1,9 @@
+pre code { background: #333; color: white }
+code .c1 {color: skyblue }
+code .se {color: navajowhite }
+code .s {color: #ffa0a0 }
+code .k {color: khaki }
+code .mi {color: khaki }
+code .kt {color: palegreen }
+code .lineno {color: #666;}
+code .lineno:after {content:'|'}

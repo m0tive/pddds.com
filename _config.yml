@@ -1,3 +1,5 @@
+pygments: true
+
 permalink: /blog/:categories/:title.html
 
 title: pddds
@@ -17,5 +19,7 @@ links:
       url: "http://twitter.com/m0tive"
     - name: "peter+at+pddds+com"
       url: "mailto:peter+at+pddds+com"
+
+googleanalytics: "UA-2993227-8"
 
 exclude: README.md clean.sh
