@@ -49,11 +49,41 @@
 
 <body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
 <div id="container">
-{% include site-header.html %}
+
+    <header id="siteheader" class="body">
+        <h1>{{ site.title }}</h1>{% if site.subtitle %}
+        <aside><p>{{ site.subtitle }}</aside>{% endif %}{% if site.nav %}
+        <hr />
+    
+        <nav id="sitenav"><div class="wrapper">
+        <ol>{% for item in site.nav %}
+            <li class="{% if item.name != page.tab %}in{% endif %}active"><a{% if item.url %} href="{{ item.url}}"{% endif %}>{{ item.name }}</a>{% if item.subnav %}
+                <ul>{% for subitem in item.subnav %}
+                    <li><a{% if subitem.url %} href="{{ subitem.url}}"{% endif %}>{{ subitem.name }}</a>{% endfor %}
+                </ul>{% endif %}{% endfor %}
+        </ol>
+        <span class="clearfix"></span>
+        </div></nav>{% endif %}
+    </header>
+
     <section id="content" class="body">
 {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
     </section> <!-- /#content -->
-{% include site-footer.html %}
+
+    <footer id="contentinfo" class="body">
+        <hr />{% if site.links %}
+        <div id="links">
+            <ul>{% for item in site.links %}
+                <li><a href="{{ item.url}}">{% if item.name %}{{ item.name }}{% else %}{{ item.url }}{% endif %}</a>{% endfor %}
+            </ul>
+        </div>{% endif %}
+        <span class="clearfix"></span>
+        <div id="copyright">
+            <p>Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}. All Rights Reserved.
+        </div>
+        <span class="clearfix"></span>
+    </footer>
+
 </div> <!-- /#container -->
 
 {% for js in site.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
