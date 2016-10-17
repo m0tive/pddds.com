@@ -49,7 +49,11 @@
 
 <body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
 <div id="container">
+{% include site-header.html %}
+    <section id="content" class="body">
 {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
+    </section> <!-- /#content -->
+{% include site-footer.html %}
 </div> <!-- /#container -->
 
 {% for js in site.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
