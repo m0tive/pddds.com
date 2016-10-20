@@ -24,4 +24,5 @@ googleanalytics: "UA-2993227-8"
 
 exclude:
     - README.md
-    - Rclean.sh
+    - "Gemfile*"
+    - "*.sh"
