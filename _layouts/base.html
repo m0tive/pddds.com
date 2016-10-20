@@ -18,4 +18,9 @@
 {% for js in site.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
 {% endfor %}{% for js in page.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
 {% endfor %}
+
+{% if jekyll.environment == "development" %}
+<script type="text/javascript" src="http://livejs.com/live.js"></script>
+{% else %}
 {% include analytics.html %}
+{% endif %}
