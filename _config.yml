@@ -1,4 +1,4 @@
-pygments: true
+highlighter: true
 
 permalink: /blog/:categories/:title.html
 
@@ -22,4 +22,10 @@ links:
 
 googleanalytics: "UA-2993227-8"
 
-exclude: README.md clean.sh
+exclude:
+    - README.md
+    - "Gemfile*"
+    - "*.sh"
+
+keep_files:
+    - wip
