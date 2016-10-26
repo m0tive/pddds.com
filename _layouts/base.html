@@ -6,6 +6,12 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 <head>
+    <script type="text/javascript">
+        // fake Modernizer no-js/js switch
+        document.documentElement.className =
+            document.documentElement.className.replace("no-js", "js")
+    </script>
+
 {% include head-meta.html %}
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 {% include head-link.html %}
