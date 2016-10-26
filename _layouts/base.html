@@ -20,6 +20,15 @@
 {% endfor %}{% for js in page.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
 {% endfor %}
 
+<script type="text/javascript" src="js/fontfaceobserver.js"></script>
+<script type="text/javascript">
+new FontFaceObserver('Fira Sans')
+    .load()
+    .then( function(){
+        document.documentElement.className += " fonts-loaded";
+    });
+</script>
+
 {% if jekyll.environment == "development" %}
 <script type="text/javascript" src="http://livejs.com/live.js"></script>
 {% else %}
