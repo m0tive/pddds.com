@@ -3,6 +3,10 @@ layout: defaultcss
 ---
 
 h1 {
-    font-family:"Fira Sans", sans-serif;
+    font-family:sans-serif;
     font-size: 2em;
+}
+
+.no-js h1, .fonts-loaded h1 {
+    font-family:"Fira Sans", sans-serif;
 }
