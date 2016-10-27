@@ -1,6 +1,6 @@
     <link rel="canonical" href="{{ page.url | canonical }}" />
 
-    <link rel="stylesheet" href="./css/{% if page.css %}{{ page.css }}{% else %}default{% endif %}.css" type="text/css" />
+    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/{% if page.css %}{{ page.css }}{% else %}default{% endif %}.css" type="text/css" />
     <!--[if ie]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
         </script>
