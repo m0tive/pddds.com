@@ -28,8 +28,12 @@
 
 <script type="text/javascript" src="./js/fontfaceobserver.js"></script>
 <script type="text/javascript">
-new FontFaceObserver('Fira Sans')
-    .load()
+let font900 = new FontFaceObserver('Fira Sans', { weight: 900 });
+let font800 = new FontFaceObserver('Fira Sans', { weight: 900 });
+let font700 = new FontFaceObserver('Fira Sans', { weight: 900 });
+let font500 = new FontFaceObserver('Fira Sans', { weight: 900 });
+
+Promise.all([font900.load(), font800.load(), font700.load(), font500.load()])
     .then( function(){
         document.documentElement.className += " fonts-loaded";
     });
