@@ -107,6 +107,21 @@ a {
     }
 }
 
+@media screen and (max-width: 345px)
+{
+    h2 {
+        font-size: 2.9em;
+    }
+
+    ul {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
 .no-js,
 .fonts-loaded {
     body {
