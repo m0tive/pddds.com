@@ -77,6 +77,16 @@ a {
     }
 }
 
+@media screen and (max-width: 500px)
+{
+    body {
+        width: auto;
+        border-radius: 0px;
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+}
+
 .no-js,
 .fonts-loaded {
     body {
