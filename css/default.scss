@@ -17,10 +17,6 @@ body {
     font-size: 16px;
 }
 
-.no-js body, .fonts-loaded body {
-    font-family:"Fira Sans", sans-serif;
-}
-
 h1 {
     font-size: 2em;
     line-height: 1em;
@@ -28,11 +24,6 @@ h1 {
     font-weight: 800;
     padding-bottom: 0.3em;
     border-bottom: 3px solid black;
-}
-
-.ie.no-js h1, .ie.fonts-loaded h1 {
-    margin-top: 0.2em;
-    padding-bottom: 0.1em;
 }
 
 h2 {
@@ -43,10 +34,6 @@ h2 {
     font-weight: 700;
 }
 
-.ie.no-js h2, .ie.fonts-loaded h2 {
-    margin-top: 0.3em;
-    margin-bottom: -0.3em;
-}
 
 ul {
     list-style: none;
@@ -57,18 +44,12 @@ ul {
     font-weight: 500;
 }
 
-.ie.no-js ul, .ie.fonts-loaded ul {
-    margin-top: 0.5em;
-    margin-bottom: -0.2em;
-}
-
 acronym {
     text-decoration: none;
-}
-
-acronym:hover {
-    color: purple;
-    cursor: help;
+    &:hover {
+        color: purple;
+        cursor: help;
+    }
 }
 
 hr {
@@ -85,18 +66,41 @@ p {
     font-weight: 500;
 }
 
-.ie.no-js p, .ie.fonts-loaded p {
-    margin-top: 0.6em;
-    margin-bottom: -0.2em;
-}
 
 a {
     color: black;
     text-decoration: none;
     font-weight: 900;
     letter-spacing: 0.07em;
+    &:hover {
+        color: orange;
+    }
 }
 
-a:hover {
-    color: orange;
+.no-js,
+.fonts-loaded {
+    body {
+        font-family:"Fira Sans", sans-serif;
+    }
+
+    // IE fixes to positioning font face
+    &.ie {
+        h1 {
+            margin-top: 0.2em;
+            padding-bottom: 0.1em;
+        }
+        h2 {
+            margin-top: 0.3em;
+            margin-bottom: -0.3em;
+        }
+        ul {
+            margin-top: 0.5em;
+            margin-bottom: -0.2em;
+        }
+        p {
+            margin-top: 0.6em;
+            margin-bottom: -0.2em;
+        }
+    }
 }
+
