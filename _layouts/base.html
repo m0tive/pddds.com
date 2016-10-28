@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]> <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]> <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]> <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if IE ]> <html class="ie no-js" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<!-- the "no-js" class is for Modernizr. -->
 <head>
     <script type="text/javascript">
         // fake Modernizer no-js/js switch
         document.documentElement.className =
-            document.documentElement.className.replace("no-js", "js")
+            document.documentElement.className.replace("no-js", "js");
+
+        // detect ie 10 && 11
+        if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+            document.documentElement.className += " ie";
+        }
     </script>
 
 {% include head-meta.html %}
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 {% include head-link.html %}
+
 </head>
 
 <body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
