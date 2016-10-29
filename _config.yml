@@ -11,6 +11,7 @@ email: "peter+at+pddds+com"
 googleanalytics: "UA-2993227-8"
 
 exclude:
+    - "_*"
     - README.md
     - "Gemfile*"
     - "*.sh"
