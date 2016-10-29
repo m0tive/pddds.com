@@ -1,3 +1,6 @@
 [submodule "_libs/fontfaceobserver"]
 	path = _libs/fontfaceobserver
 	url = https://github.com/bramstein/fontfaceobserver.git
+[submodule "_libs/fira"]
+	path = _libs/fira
+	url = https://github.com/mozilla/Fira.git
