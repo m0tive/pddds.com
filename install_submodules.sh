@@ -1,5 +1,16 @@
 #!/bin/bash
 
-git submodule init
+git submodule update --init
 
-cp -vf _libs/fontfaceobserver/fontfaceobserver.js js/.
+mkdir -p js
+cp -f _libs/fontfaceobserver/fontfaceobserver.js js/.
+
+mkdir -p fonts
+cp -f \
+	_libs/fira/*/FiraSans-Light{,Italic}.* \
+	_libs/fira/*/FiraSans-Medium{,Italic}.* \
+	_libs/fira/*/FiraSans-Regular.* \
+	_libs/fira/*/FiraSans-SemiBold{,Italic}.* \
+	_libs/fira/*/FiraSans-Bold{,Italic}.* \
+	_libs/fira/*/FiraSans-ExtraBold{,Italic}.* \
+		fonts/.
