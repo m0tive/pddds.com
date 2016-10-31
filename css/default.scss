@@ -77,6 +77,21 @@ a {
     }
 }
 
+.no-js,
+.fonts-loaded {
+    body {
+        font-family:"Fira Sans", sans-serif;
+    }
+
+    p {
+        font-size: 2.1em;
+    }
+
+    a {
+        letter-spacing: 0.07em;
+    }
+}
+
 @media screen and (max-width: 460px)
 {
     body {
@@ -119,21 +134,6 @@ a {
 
     p {
         font-size: 1.2em;
-    }
-}
-
-.no-js,
-.fonts-loaded {
-    body {
-        font-family:"Fira Sans", sans-serif;
-    }
-
-    p {
-        font-size: 2.1em;
-    }
-
-    a {
-        letter-spacing: 0.07em;
     }
 }
 
