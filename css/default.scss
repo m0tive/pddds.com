@@ -135,25 +135,5 @@ a {
     a {
         letter-spacing: 0.07em;
     }
-
-    // IE fixes to positioning font face
-    &.ie {
-        h1 {
-            margin-top: 0.2em;
-            padding-bottom: 0.1em;
-        }
-        h2 {
-            margin-top: 0.3em;
-            margin-bottom: -0.3em;
-        }
-        ul {
-            margin-top: 0.5em;
-            margin-bottom: -0.2em;
-        }
-        p {
-            margin-top: 0.6em;
-            margin-bottom: -0.2em;
-        }
-    }
 }
 
