@@ -33,12 +33,11 @@
 
 <script type="text/javascript" src="{% if site.root %}{{ site.root }}{% endif %}/js/fontfaceobserver.js"></script>
 <script type="text/javascript">
-let font900 = new FontFaceObserver('Fira Sans', { weight: 900 });
 let font800 = new FontFaceObserver('Fira Sans', { weight: 800 });
 let font700 = new FontFaceObserver('Fira Sans', { weight: 700 });
 let font500 = new FontFaceObserver('Fira Sans', { weight: 500 });
 
-Promise.all([font900.load(), font800.load(), font700.load(), font500.load()])
+Promise.all([font800.load(), font700.load(), font500.load()])
     .then( function(){
         document.documentElement.className += " fonts-loaded";
     });
