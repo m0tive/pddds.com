@@ -59,7 +59,7 @@ hr {
 }
 
 p {
-    font-size: 2.0em; // overrided in .fonts-loaded
+    font-size: 2.0em;
     line-height: 1em;
     margin: 0.5em 0 0;
     text-align:center;
@@ -81,10 +81,6 @@ a {
 .fonts-loaded {
     body {
         font-family:"Fira Sans", sans-serif;
-    }
-
-    p {
-        font-size: 2.1em;
     }
 
     a {
