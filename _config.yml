@@ -8,24 +8,15 @@ url: http://pddds.com
 author: Peter Dodds
 email: "peter+at+pddds+com"
 
-nav:
-    - name: home
-      url: /
-
-links:
-    - name: github
-      url: "https://github.com/m0tive"
-    - name: twitter
-      url: "http://twitter.com/m0tive"
-    - name: "peter+at+pddds+com"
-      url: "mailto:peter+at+pddds+com"
-
 googleanalytics: "UA-2993227-8"
 
 exclude:
+    - "_*"
     - README.md
     - "Gemfile*"
     - "*.sh"
 
 keep_files:
     - wip
+
+timezone: Europe/London

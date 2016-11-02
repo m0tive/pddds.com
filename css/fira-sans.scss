@@ -1,0 +1,40 @@
+---
+---
+
+// Fira Sans
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Medium.eot');
+    src: url('../fonts/FiraSans-Medium.eot') format('embedded-opentype'),
+         url('../fonts/FiraSans-Medium.woff2') format('woff2'),
+         url('../fonts/FiraSans-Medium.woff') format('woff'),
+         url('../fonts/FiraSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Bold.eot');
+    src: url('../fonts/FiraSans-Bold.eot') format('embedded-opentype'),
+         url('../fonts/FiraSans-Bold.woff2') format('woff2'),
+         url('../fonts/FiraSans-Bold.woff') format('woff'),
+         url('../fonts/FiraSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-ExtraBold.eot');
+    src: url('../fonts/FiraSans-ExtraBold.eot') format('embedded-opentype'),
+         url('../fonts/FiraSans-ExtraBold.woff2') format('woff2'),
+         url('../fonts/FiraSans-ExtraBold.woff') format('woff'),
+         url('../fonts/FiraSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
