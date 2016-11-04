@@ -3,9 +3,7 @@ layout: base
 tab: home
 ---
 
-# pddds
-
-## Peter Dodds
+# Peter Dodds
 
 * Software Developer
 * <acronym title="User Experience">UX</acronym> Practitioner

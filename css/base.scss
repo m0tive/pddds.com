@@ -8,32 +8,42 @@ html {
 body {
     background-color: white;
     font-family:sans-serif;
-    width: 400px;
-    padding: 20px 23px;
-    margin: 100px auto;
+    width: 900px;
+    padding: 0 23px;
+    margin: 1em auto;
 
     box-shadow: 0 0 10px 5px #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
 
-h1 {
-    font-size: 2em;
-    line-height: 1em;
-    margin: 0;
-    font-weight: 800;
-    padding-bottom: 0.3em;
-    border-bottom: 3px solid black;
+header {
+    h1 {
+        font-size: 1.5em;
+        line-height: 1em;
+        font-weight: 800;
+        margin: 0 0 0.5em;
+    }
+
+    .wood-img {
+        background-color: orange;
+        width: 100%;
+        height: 2em;
+    }
+
+    padding: 0.6em 0 0.5em;
+    border-bottom: 1px solid lightgrey;
 }
 
-h2 {
-    font-size: 8em;
-    line-height: 0.8em;
-    margin: 0.1em 0 0 -0.05em;
-    letter-spacing: 0;
-    font-weight: 700;
+.fonts-loaded header {
+    font-family:"Fira Sans", sans-serif;
 }
 
+
+footer {
+    font-size: 0.9em;
+    color: grey;
+}
 
 ul {
     list-style: none;
@@ -58,13 +68,6 @@ hr {
     margin: 0.5em 0;
 }
 
-p {
-    font-size: 2.0em;
-    line-height: 1em;
-    margin: 0.5em 0 0;
-    text-align:center;
-    font-weight: 500;
-}
 
 
 a {
@@ -79,7 +82,7 @@ a {
 
 .fonts-loaded {
     body {
-        font-family:"Fira Sans", sans-serif;
+//        font-family:"Fira Sans", sans-serif;
     }
 
     a {
@@ -89,46 +92,9 @@ a {
 
 @media screen and (max-width: 460px)
 {
-    body {
-        width: auto;
-        border-radius: 0px;
-        margin-top: 30px;
-        padding-bottom: 0;
-    }
-    h1 {
-        line-height: 2em;
-        font-size: 1.6em;
-    }
-    h2 {
-        padding-top:0.3em;
-        font-size: 4em;
-    }
-
-    ul {
-        font-size: 2em;
-    }
-    hr { margin-top: 2em; }
-
-
-    p {
-        font-size: 1.5em;
-        line-height: 2em;
-        padding-bottom: 1em;
-    }
 }
 
 @media screen and (max-width: 345px)
 {
-    h2 {
-        font-size: 2.9em;
-    }
-
-    ul {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1.2em;
-    }
 }
 
