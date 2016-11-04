@@ -29,8 +29,9 @@
 
     <link rel="canonical" href="{{ page.url | canonical }}" />
 
-    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/fira-sans.css">
-    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/{% if page.css %}{{ page.css }}{% else %}base{% endif %}.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.root }}/css/fira-sans.css">
+    <link rel="stylesheet" href="{{ site.root }}/css/base.css" type="text/css" />
+    {% if page.css %}<link rel="stylesheet" href="{{ site.root }}/css/{{ page.css }}.css" type="text/css" />{% endif %}
 
     <!--
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.url }}/atom.xml" />
@@ -40,23 +41,14 @@
 
 
 <body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
-<div id="container">
 
-    <header>
-        <h1>{{ site.title }}</h1>
-    </header>
-
-    <section>
 {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
-    </section> <!-- /#content -->
 
-    <footer>
-        <span id="copyright" title="{{site.time}}">Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}. All Rights Reserved.</span>
-    </footer>
+<footer>
+    <span id="copyright" title="{{site.time}}">Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}. All Rights Reserved.</span>
+</footer>
 
-</div> <!-- /#container -->
-
-<script type="text/javascript" src="{% if site.root %}{{ site.root }}{% endif %}/js/fontfaceobserver.js"></script>
+<script type="text/javascript" src="{{ site.root }}/js/fontfaceobserver.js"></script>
 <script type="text/javascript">
 let font800 = new FontFaceObserver('Fira Sans', { weight: 800 });
 let font700 = new FontFaceObserver('Fira Sans', { weight: 700 });
