@@ -30,7 +30,7 @@
     <link rel="canonical" href="{{ page.url | canonical }}" />
 
     <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/fira-sans.css">
-    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/{% if page.css %}{{ page.css }}{% else %}default{% endif %}.css" type="text/css" />
+    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/{% if page.css %}{{ page.css }}{% else %}base{% endif %}.css" type="text/css" />
 
     <!--
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.url }}/atom.xml" />
