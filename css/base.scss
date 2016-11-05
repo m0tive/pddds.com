@@ -3,7 +3,7 @@
 
 html {
     background-color: #9E713A;
-        background-image: url("/img/oak-natural.jpg");
+        background-image: url("{{ site.root }}/img/oak-natural.jpg");
         background-repeat: repeat;
 }
 
