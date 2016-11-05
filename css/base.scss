@@ -2,7 +2,9 @@
 ---
 
 html {
-    background-color: #eee;
+    background-color: #9E713A;
+        background-image: url("/img/oak-natural.jpg");
+        background-repeat: repeat;
 }
 
 body {
@@ -12,7 +14,7 @@ body {
     padding: 0 23px;
     margin: 1em auto;
 
-    box-shadow: 0 0 10px 5px #ddd;
+    box-shadow: 0 0 10px 5px #7B5030;
     border-radius: 5px;
     font-size: 16px;
 }
