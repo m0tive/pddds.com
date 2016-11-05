@@ -44,13 +44,28 @@
 
     <header>
         <h1>pddds</h1>
+        <hr />
     </header>
 
-{{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
+    <div id="page">
+        <nav>{% include nav.html %}</nav>
 
-<footer>
-    <span id="copyright" title="{{site.time}}">Copyright &copy; {{ site.author }} {{ site.time | date: "%Y" }}. All Rights Reserved.</span>
-</footer>
+        <main>
+        {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
+        </main>
+
+        <aside>
+            <h2>Peter Dodds</h2>
+            <p>Is totally a person...</p>
+        </aside>
+    </div>
+
+    <footer>
+        <hr />
+        <p id="copyright" title="{{site.time}}">
+            &copy; {{ site.author }} {{ site.time | date: "%Y" }}
+        </p>
+    </footer>
 
 <script type="text/javascript" src="{{ site.root }}/js/fontfaceobserver.js"></script>
 <script type="text/javascript">
