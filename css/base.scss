@@ -124,11 +124,13 @@ header {
 }
 
 
-footer > p {
+footer {
+    border-bottom: 0;
+    > p {
     font-size: 0.9em;
     color: grey;
-    border-bottom: 0;
     text-align: right;
+    }
 }
 
 
