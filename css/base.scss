@@ -3,8 +3,8 @@
 
 html {
     background-color: #9E713A;
-        background-image: url("{{ site.root }}/img/oak-natural.jpg");
-        background-repeat: repeat;
+    background-image: url("{{ site.root }}/img/oak-natural.jpg");
+    background-repeat: repeat;
 }
 
 body {
@@ -55,8 +55,10 @@ header {
     }
 }
 
-.fonts-loaded header h1 {
-    font-family:"Fira Sans", sans-serif;
+.fonts-loaded {
+    h1, h2, h3, h4 {
+        font-family:"Fira Sans", sans-serif;
+    }
 }
 
 #page {
