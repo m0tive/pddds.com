@@ -44,15 +44,14 @@
 
     <header>
         <h1>pddds</h1>
-        <hr />
     </header>
 
     <div id="page">
-        <nav>{% include nav.html %}</nav>
-
         <main>
         {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
         </main>
+
+        <nav>{% include nav.html %}</nav>
 
         <aside>
             <h2>Peter Dodds</h2>
@@ -61,7 +60,6 @@
     </div>
 
     <footer>
-        <hr />
         <p id="copyright" title="{{site.time}}">
             &copy; {{ site.author }} {{ site.time | date: "%Y" }}
         </p>
