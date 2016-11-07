@@ -97,7 +97,10 @@ header {
     @media all and (max-width: 768px)
     {
         padding: 0;
-        flex-direction: column;
+        /* doesn't work in old browsers
+        flex-direction: column; */
+        display: block;
+
         main, nav, aside {
             order: 0;
             padding: 0;
@@ -116,13 +119,6 @@ header {
     }
 
 }
-
-.ie {
-    #page{
-        display: block;
-    }
-}
-
 
 footer {
     border-bottom: 0;
