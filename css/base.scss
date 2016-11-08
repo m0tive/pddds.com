@@ -58,9 +58,12 @@ header {
         font-size: 1.5em;
         line-height: 1em;
         font-weight: 800;
-        vertical-align: bottom;
         letter-spacing: 0.07em;
     }
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .fonts-loaded {
@@ -123,9 +126,10 @@ header {
 footer {
     border-bottom: 0;
     > p {
-    font-size: 0.9em;
-    color: grey;
-    text-align: right;
+        font-size: 0.9em;
+        color: lightgrey;
+        text-align: right;
+        text-shadow: 1px 1px 0px white;
     }
 }
 
