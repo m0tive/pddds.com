@@ -32,7 +32,8 @@ a {
 
 
 nav {
-    ul { padding: 0; }
+    ul {
+    padding: 0; }
     li:first-child {
         background-color: #4fa06e;
         color: white;
@@ -96,7 +97,7 @@ header {
 }
 
 h1, h2, h3, h4 {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .fonts-loaded {
