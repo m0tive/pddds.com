@@ -1,9 +1,30 @@
 ---
 ---
+$purple: #9d4ddf;
+$darkpurple: #411c60;
+$green:#4fa06e;
+
+$lightwood:#9E713A;
+$darkwood:#7B5030;
+
+$linkCol:$purple;
+$linkHoverCol:$green;
+$linkVistedCol:$darkpurple;
+
+$highlightCol:rgba(255, 255, 255, 0.3);
+$shadowCol:rgba(0, 0, 0, 0.1);
+
+@function site_url($url) { @return url("{{ site.root }}#{$url}"); }
+
+@mixin border-shadow($highlight, $shadow) {
+    border-#{$highlight}: 1px solid $highlightCol;
+    border-#{$shadow}: 1px solid $shadowCol;
+}
+
 
 html {
-    background-color: #9E713A;
-    background-image: url("{{ site.root }}/img/oak-natural.jpg");
+    background-color: $lightwood;
+    background-image: site_url("/img/oak-natural.jpg");
     background-repeat: repeat;
 }
 
@@ -15,7 +36,7 @@ body {
     padding: 1px;
     margin: 1em auto;
 
-    box-shadow: 0 0 10px 5px #7B5030;
+    box-shadow: 0 0 10px 5px $darkwood;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -41,9 +62,9 @@ body {
 
 body > * {
     margin: 0 1em;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @include border-shadow(top, bottom);
 }
+
 #page {
     display: flex;
     padding: 1em 0;
@@ -71,21 +92,16 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: #9d4ddf;
-    &:visited {
-        color: #411c60;
-    }
-    &:hover {
-        color: #4fa06e;
-    }
+    color: $linkCol;
+    &:visited { color: $linkVistedCol; }
+    &:hover { color: $linkHoverCol; }
 }
 
 
 #page {
     > * {
         padding: 0 1em;
-        border-right: 1px solid rgba(0, 0, 0, 0.1);
-        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        @include border-shadow(left, right);
     }
     main {
         flex: 3 1 60%;
@@ -118,8 +134,7 @@ a {
             padding: 0;
             border-right: 0;
             border-left: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            @include border-shadow(top, bottom);
         }
 
         main {
@@ -136,20 +151,20 @@ nav {
     ul {
     padding: 0; }
     li:first-child {
-        background-color: #4fa06e;
+        background-color: $green;
         color: white;
     }
     li {
         color: #4fa06e;
         font-weight: 400;
         list-style: none;
-        border: 1px solid #4fa06e;
+        border: 1px solid $green;
         border-radius: 1em;
         padding: 0 0.5em;
         margin: 0.2em 0;
         &:hover {
-            background-color: #964ddf;
-            border-color: #964ddf;
+            background-color: $purple;
+            border-color: $purple;
             color: white;
         }
     }
@@ -171,7 +186,6 @@ footer {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    @include border-shadow(bottom, top);
 }
 
