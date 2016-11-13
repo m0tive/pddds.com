@@ -14,7 +14,7 @@ $linkVistedCol:$darkpurple;
 $highlightCol:rgba(255, 255, 255, 0.3);
 $shadowCol:rgba(0, 0, 0, 0.1);
 
-@function site_url($url) { @return url("{{ site.root }}#{$url}"); }
+@function site_url($url) { @return url("{{ site.baseurl }}#{$url}"); }
 
 @mixin border-shadow($highlight, $shadow) {
     border-#{$highlight}: 1px solid $highlightCol;

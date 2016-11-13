@@ -1,14 +1,14 @@
 <article class="entry">
     <header>
         <h2>
-            <a href="{{ site.root }}{{ include.post.url }}"
+            <a href="{{ include.post.url | prepend:site.baseurl }}"
                 rel="bookmark"
                 title="Premalink to {{ include.post.title }}">
             {{ include.post.title }}
             </a>
         </h2>
         <abbr class="published" title="{{ include.post.date }}">
-            <a href="{{ site.root }}{{ include.post.url }}"
+            <a href="{{ include.post.url | prepend:site.baseurl }}"
                 rel="bookmark"
                 title="Premalink to {{ include.post.title }}">
             {{ include.post.date | date:'%b %d %Y' }}
