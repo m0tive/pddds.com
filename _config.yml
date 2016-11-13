@@ -20,3 +20,15 @@ keep_files:
     - wip
 
 timezone: Europe/London
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: "base"
+    -
+        scope:
+            path: "blog"
+        values:
+            layout: "post"

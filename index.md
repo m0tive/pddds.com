@@ -1,6 +1,4 @@
 ---
-layout: base
-tab: home
 ---
 
 # latest
