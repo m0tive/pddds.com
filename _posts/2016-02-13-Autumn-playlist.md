@@ -29,12 +29,5 @@ Autumn's music:
   0.  Yet Again - Grizzly Bear
   0.  Lover's Spit - Broken Social Scene
 
-[Follow me on Spotify](https://open.spotify.com/user/m0tive)
+{% include spotify_playlist.html user="m0tive" id="34GE0FlrwrXl1CeFq9FI7m" %}
 
-<iframe
-    src="https://embed.spotify.com/?uri=spotify%3Auser%3Am0tive%3Aplaylist%3A34GE0FlrwrXl1CeFq9FI7m"
-    width="300"
-    height="380"
-    frameborder="0"
-    allowtransparency="true">
-</iframe>
