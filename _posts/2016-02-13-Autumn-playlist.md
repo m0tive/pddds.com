@@ -6,28 +6,28 @@ I've been organising my music on Spotify I enjoy listening to into 3-month lists
 
 Autumn's music:
 
-# One Read Thread - Blind Pilot
-# Blur Oak - Bowbirds
-# Radio cure - Wilco
-# Hunters Map - Fionn Regan
-# The Skin of My Yellow Country Teeth - Clap Your Hands Say Yeah
-# The Stars of Track & Field - Belle & Sebastian
-# Barriers - Aereogramme
-# Birdhous In Your Soul - They Might Be Giants
-# The End Of The Race - Willy Mason
-# Upward Over The Mountain - Iron & Wine
-# Expectations - Belle & Sebastian
-# Far Away - José González
-# Pretty In A Panic - My Latest Novel
-# Measuring Cups - Andrew Bird
-# 2080 - Yeasayer
-# Who Named The Days? - Arab Strap
-# Post-Tour, Pre-Judgement - Aereogramme
-# The Hope Edition - My Latest Novel
-# The Underwood Typewriter - Fionn Regan
-# Free Translator - The Books
-# Yet Again - Grizzly Bear
-# Lover's Spit - Broken Social Scene
+  0.  One Read Thread - Blind Pilot
+  0.  Blur Oak - Bowbirds
+  0.  Radio cure - Wilco
+  0.  Hunters Map - Fionn Regan
+  0.  The Skin of My Yellow Country Teeth - Clap Your Hands Say Yeah
+  0.  The Stars of Track & Field - Belle & Sebastian
+  0.  Barriers - Aereogramme
+  0.  Birdhous In Your Soul - They Might Be Giants
+  0.  The End Of The Race - Willy Mason
+  0.  Upward Over The Mountain - Iron & Wine
+  0.  Expectations - Belle & Sebastian
+  0.  Far Away - José González
+  0.  Pretty In A Panic - My Latest Novel
+  0.  Measuring Cups - Andrew Bird
+  0.  2080 - Yeasayer
+  0.  Who Named The Days? - Arab Strap
+  0.  Post-Tour, Pre-Judgement - Aereogramme
+  0.  The Hope Edition - My Latest Novel
+  0.  The Underwood Typewriter - Fionn Regan
+  0.  Free Translator - The Books
+  0.  Yet Again - Grizzly Bear
+  0.  Lover's Spit - Broken Social Scene
 
 [Follow me on Spotify](https://open.spotify.com/user/m0tive)
 
