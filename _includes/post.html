@@ -23,14 +23,7 @@
         {% if detail %}
             {{ content }}
         {% else %}
-            {% if truncateby %}
-            {{ post.content | truncatewords: truncateby }}
-            <p class="readmore">
-                <a href="{{ post.url }}">Continue reading</a>
-            </p>
-            {% else %}
-                {{ post.content }}
-            {% endif %}
+            {{ post.excerpt }}
         {% endif %}
     </div>
 
