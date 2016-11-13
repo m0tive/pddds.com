@@ -4,6 +4,6 @@
 # latest
 
 {% for post in site.posts %}
-{% include post.html %}
+{% include post.html post=post %}
 {% endfor %}
 
