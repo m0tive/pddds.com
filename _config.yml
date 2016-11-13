@@ -1,6 +1,6 @@
 highlighter: true
 
-permalink: /blog/:categories/:title.html
+permalink: /blog/:categories/:year/:month/:title
 
 title: pddds
 subtitle: "new site, coming soon"
