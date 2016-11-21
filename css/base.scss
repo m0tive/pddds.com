@@ -39,30 +39,26 @@ body {
     box-shadow: 0 0 10px 5px $darkwood;
     border-radius: 5px;
     font-size: 16px;
-}
 
-@media screen and (max-width: 1280px)
-{
-    body {
+    @media screen and (max-width: 1280px)
+    {
         width: auto;
         margin: 16px;
         transition: all 0.2s;
     }
-}
 
-@media screen and (max-width: 980px)
-{
-    body {
+    @media screen and (max-width: 980px)
+    {
         margin-left: 0;
         margin-right: 0;
         border-radius: 0;
         transition: all 0.2s;
     }
-}
 
-body > * {
-    margin: 0 1em;
-    @include border-shadow(top, bottom);
+    > * {
+        margin: 0 1em;
+        @include border-shadow(top, bottom);
+    }
 }
 
 #page {
