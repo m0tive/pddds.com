@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE ]> <html class="ie no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html id="top" class="no-js" lang="en"><!--<![endif]-->
 <head>
     <script type="text/javascript">
         // fake Modernizer no-js/js switch
@@ -44,6 +44,7 @@
 
     <header>
         <h1><a href="{{ site.baseurl }}/">pddds</a></h1>
+        <nav class="mobile-jump"><a href="#about">About ↓</a></nav>
     </header>
 
     <div id="page">
@@ -53,9 +54,10 @@
 
         <nav>{% include nav.html %}</nav>
 
-        <aside>
-            <h2>Peter Dodds</h2>
+        <aside id="about">
+            <h2>About</h2>
             <p>Is totally a person...</p>
+            <p class="mobile-jump"><a href="#top">Top ↑</a></p>
         </aside>
     </div>
 
