@@ -26,6 +26,10 @@ $textCol:black;
 
 
 html {
+{% if jekyll.environment == "development" %}
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+{% endif %}
     background-color: $lightwood;
     background-image: site_url("/img/oak-natural.jpg");
     background-repeat: repeat;
