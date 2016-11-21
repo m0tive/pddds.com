@@ -14,6 +14,9 @@ $linkVistedCol:$darkpurple;
 $highlightCol:rgba(255, 255, 255, 0.3);
 $shadowCol:rgba(0, 0, 0, 0.1);
 
+$backgroundCol:#f3f3f3;
+$textCol:black;
+
 @function site_url($url) { @return url("{{ site.baseurl }}#{$url}"); }
 
 @mixin border-shadow($highlight, $shadow) {
@@ -26,11 +29,12 @@ html {
     background-color: $lightwood;
     background-image: site_url("/img/oak-natural.jpg");
     background-repeat: repeat;
+    color: $textCol;
 }
 
 
 body {
-    background-color: #f3f3f3;
+    background-color: $backgroundCol;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
 
     width: 980px - 32px;
@@ -97,6 +101,18 @@ body > header {
     {
         display:block;
         text-align: right;
+        > a {
+            &, &:visited {
+                color: $linkCol;
+            }
+            &:hover {
+                background-color: #e7e7e7;
+                text-decoration:none;
+            }
+            border: 1px solid $shadowCol;
+            border-radius: 5px;
+            padding: 2px 1em 3px;
+        }
     }
 }
 
