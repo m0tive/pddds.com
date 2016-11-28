@@ -1,4 +1,5 @@
 ---
+title: index
 ---
 
 # latest

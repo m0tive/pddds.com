@@ -40,7 +40,7 @@
 </head>
 
 
-<body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
+<body {% if page.title %}id="{{ page.title | slugify }}"{%endif%}>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
 
     <header>
         <h1><a href="{{ site.baseurl }}/">pddds</a></h1>
