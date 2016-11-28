@@ -149,13 +149,14 @@ a {
         @include border-shadow(left, right);
     }
     > main {
+        flex: auto; // ensure expands
         padding-left:0;
         border-left:0;
         order: 1;
     }
 
     > aside {
-        flex: 20em;
+        flex: 0 0 14em; // fixed size
         padding-right:0;
         border-right:0;
         order: 2;
