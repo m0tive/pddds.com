@@ -53,8 +53,8 @@
         </main>
 
         <aside id="about">
-            <h2>About</h2>
-            <p>Is totally a person...</p>
+            {% capture about %}{% include about.md %}{% endcapture %}
+            {{ about | markdownify }}
             <p class="mobile-jump"><a href="#top">Top ↑</a></p>
         </aside>
     </div>
