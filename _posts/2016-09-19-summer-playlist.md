@@ -8,7 +8,7 @@ June, July, and August
    3. Percussion Gun - White Rabbits
    4. Let Your Love Grow - Moderat, Paul St. Hilaire
    5. Darker - Doves
-   6. I Heart L.ASubtle3:56
+   6. I Heart L.A - Subtle
    7. Anthems For A Seventeen Year Old Girl - Broken Social Scene
    8. A True Story of a Story of True Love - The Books
    9. All The King's Men - Wild Beasts
