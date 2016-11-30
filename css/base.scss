@@ -227,6 +227,9 @@ a {
 
 }
 
+// remove any leading hr
+#page > main > hr:first-child { display: none; }
+
 body > footer {
     border-bottom: 0;
     > p {
