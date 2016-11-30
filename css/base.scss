@@ -230,6 +230,25 @@ a {
 // remove any leading hr
 #page > main > hr:first-child { display: none; }
 
+#page > main > hr { margin: 1em 0 1em; }
+
+article {
+    > header {
+        margin: 0 0 1em;
+        > h2 {
+            margin-bottom: -0em;
+        }
+        > abbr {
+            &, a, a:visited {
+                color: #bbb;
+                text-shadow: 1px 1px 0px white;
+                text-decoration: none;
+            }
+            font-size: smaller;
+        }
+    }
+}
+
 body > footer {
     border-bottom: 0;
     > p {
