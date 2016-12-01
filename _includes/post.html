@@ -1,16 +1,15 @@
+{% capture htag %}{% if include.htag %}{{include.htag}}{%else%}h1{% endif %}{% endcapture %}
 <article class="entry">
     <header>
-        <h2>
+        <{{htag}}>
             <a href="{{ include.post.url | prepend:site.baseurl }}"
                 rel="bookmark"
                 title="Premalink to {{ include.post.title }}">
             {{ include.post.title }}
             </a>
-        </h2>
+        </{{htag}}>
         <abbr class="published" title="{{ include.post.date }}">
-            <a href="{{ include.post.url | prepend:site.baseurl }}"
-                rel="bookmark"
-                title="Premalink to {{ include.post.title }}">
+            <a href="{{ include.post.url | prepend:site.baseurl }}">
             {{ include.post.date | date:'%b %d %Y' }}
             </a>
         </abbr>

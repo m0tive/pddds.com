@@ -236,7 +236,7 @@ a {
 article {
     > header {
         margin: 0 0 1em;
-        > h2 {
+        > h2, > h1 {
             margin-bottom: -0em;
         }
         > abbr {
