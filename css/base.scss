@@ -13,14 +13,20 @@ $linkVistedCol:darken($linkCol, 20%);
 $highlightCol:rgba(255, 255, 255, 0.3);
 $shadowCol:rgba(0, 0, 0, 0.1);
 
-$backgroundCol:#f3f3f3;
+$backgroundCol:darken(white, 4%);
 $textCol:black;
+$lightTextCol:rgba(0, 0, 0, 0.25);
 
 @function site_url($url) { @return url("{{ site.baseurl }}#{$url}"); }
 
 @mixin border-shadow($highlight, $shadow) {
     border-#{$highlight}: 1px solid $highlightCol;
     border-#{$shadow}: 1px solid $shadowCol;
+}
+
+@mixin shadow-text {
+    color: $lightTextCol;
+    text-shadow: 1px 1px 0px white;
 }
 
 
@@ -116,7 +122,7 @@ body > header {
                 color: $linkCol;
             }
             &:hover {
-                background-color: #e7e7e7;
+                background-color: darken($backgroundCol, 5%);
                 text-decoration:none;
             }
             border: 1px solid $shadowCol;
@@ -255,10 +261,9 @@ article {
             margin-bottom: -0em;
         }
         > abbr {
-            &, a, a:visited {
-                color: #bbb;
-                text-shadow: 1px 1px 0px white;
-                text-decoration: none;
+            text-decoration: none;
+            &, a, a:visited, a:hover {
+                @include shadow-text;
             }
             font-size: smaller;
         }
@@ -269,9 +274,8 @@ body > footer {
     border-bottom: 0;
     > p {
         font-size: 0.9em;
-        color: #bbb;
         text-align: right;
-        text-shadow: 1px 1px 0px white;
+        @include shadow-text;
     }
 }
 
