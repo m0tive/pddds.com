@@ -38,7 +38,13 @@ html {
 
 body {
     background-color: $backgroundCol;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        sans-serif;
 
     width: 980px - 32px;
     padding: 1px;
