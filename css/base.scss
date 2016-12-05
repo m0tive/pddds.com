@@ -1,15 +1,14 @@
 ---
 ---
-$purple: #9d4ddf;
-$darkpurple: #411c60;
-$green:#4fa06e;
+$purple: #8D205A;
+$green:#5f9252;
 
 $lightwood:#9E713A;
 $darkwood:#7B5030;
 
-$linkCol:$purple;
-$linkHoverCol:$green;
-$linkVistedCol:$darkpurple;
+$linkCol:$green;
+$linkHoverCol:$purple;
+$linkVistedCol:darken($linkCol, 20%);
 
 $highlightCol:rgba(255, 255, 255, 0.3);
 $shadowCol:rgba(0, 0, 0, 0.1);
