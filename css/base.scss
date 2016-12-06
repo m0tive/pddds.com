@@ -110,6 +110,19 @@ body > header {
     }
 }
 
+a.button {
+    &, &:visited {
+        color: $linkCol;
+    }
+    &:hover {
+        background-color: darken($backgroundCol, 5%);
+        text-decoration:none;
+    }
+    border: 1px solid $shadowCol;
+    border-radius: 5px;
+    padding: 2px 0.8em 3px;
+}
+
 .mobile-jump {
     display:none;
 
@@ -117,18 +130,6 @@ body > header {
     {
         display:block;
         text-align: right;
-        > a {
-            &, &:visited {
-                color: $linkCol;
-            }
-            &:hover {
-                background-color: darken($backgroundCol, 5%);
-                text-decoration:none;
-            }
-            border: 1px solid $shadowCol;
-            border-radius: 5px;
-            padding: 2px 1em 3px;
-        }
     }
 }
 
