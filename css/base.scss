@@ -287,3 +287,11 @@ hr {
     @include border-shadow(bottom, top);
 }
 
+// error page special
+.error #page > main {
+    align-self: center;
+    text-align: center;
+    h1 {
+        font-size: 4em;
+    }
+}
