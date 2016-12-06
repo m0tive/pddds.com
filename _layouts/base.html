@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE ]> <html class="ie no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html id="top" class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html id="top" class="no-js {% if page.class %}{{ page.class | slugify }}{%endif%}" lang="en"><!--<![endif]-->
 <head>
     <script type="text/javascript">
         // fake Modernizer no-js/js switch
@@ -40,7 +40,7 @@
 </head>
 
 
-<body {% if page.title %}id="{{ page.title | slugify }}"{%endif%}>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
+<body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
 
     <header>
         <h1><a href="{{ site.baseurl }}/">pddds</a></h1>
