@@ -1,42 +1,23 @@
+{% capture htag %}{% if include.htag %}{{include.htag}}{%else%}h1{% endif %}{% endcapture %}
 <article class="entry">
     <header>
-        {% if detail %}
-            <h2>{{ post.title }}</h2>{% if post.subtitle %}
-            <div class="subtitle">{{ post.subtitle }}</div>{% endif %}{% unless nodate %}
-            <abbr class="published" title="{{ post.date }}">
-                {{ post.date | date:'%b %d %Y' }}
-            </abbr>{% endunless %}{% unless noauthor%}
-            <span class="author">{% unless nodate %} ~ {% endunless %}
-            by {{ post.author }}</span>{% endunless %}
-        {% else %}
-            {% unless nodate %}
-            <abbr class="published" title="{{ post.date }}">
-                {{ post.date | date:'%b %d %Y' }}
-            </abbr>
-            {% endunless %}
-            <h3><a href="{{ post.url }}" rel="bookmark" title="Premalink to {{ post.title }}">{{ post.title }}</a></h3>
-        {% endif %}
-        <span class="clr"></span>
+        <{{htag}}>
+            <a href="{{ include.post.url | prepend:site.baseurl }}"
+                rel="bookmark"
+                title="Premalink to {{ include.post.title }}">
+            {{ include.post.title }}
+            </a>
+        </{{htag}}>
+        <abbr class="published" title="{{ include.post.date }}">
+            <a href="{{ include.post.url | prepend:site.baseurl }}">
+            {{ include.post.date | date:'%b %d %Y' }}
+            </a>
+        </abbr>
     </header>
 
-    <div class="entry-content">
-        {% if detail %}
-            {{ content }}
-        {% else %}
-            {% if truncateby %}
-            {{ post.content | truncatewords: truncateby }}
-            <p class="readmore">
-                <a href="{{ post.url }}">Continue reading</a>
-            </p>
-            {% else %}
-                {{ post.content }}
-            {% endif %}
-        {% endif %}
-    </div>
+    <main>
+        {{ include.post.content }}
+    </main>
 
-    {% unless nofooter %}
-    <footer>
-        <!-- comments, author details... other stuff -->
-    </footer>
-    {% endunless %}
+    <footer></footer>
 </article>

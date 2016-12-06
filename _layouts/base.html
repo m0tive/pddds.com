@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE ]> <html class="ie no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html id="top" class="no-js {% if page.class %}{{ page.class | slugify }}{%endif%}" lang="en"><!--<![endif]-->
 <head>
     <script type="text/javascript">
         // fake Modernizer no-js/js switch
@@ -13,25 +13,59 @@
         }
     </script>
 
+    <meta charset="utf-8" />
 
-{% include head-meta.html %}
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>{% if site.title %}{% if page.title %}{{ page.title | downcase }} | {% endif %}{{ site.title }}{% else %}missing site.title{% endif %}</title>
 
-    <link rel="stylesheet" href="{% if site.root %}{{ site.root }}{% endif %}/css/fira-sans.css">
-{% include head-link.html %}
+    <meta name="title" content="{% if site.title %}{% if page.title %}{{ page.title | downcase }} | {% endif %}{{ site.title }}{% else %}missing site.title{% endif %}" />
+    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% else %}<!-- no page.description -->{% endif %}
+    {% if page.robots %}<meta name="robots" content="{{ page.robots }}" />{% else %}<!-- no page.robots -->{% endif %}
 
+    {% if site.author %}<meta name="author" content="{{ site.author }}" />
+    <meta name="Copyright" content="Copyright {{ site.author }} {{ site.time | date: "%Y" }}. All Rights Reserved." />
+    {% else %}<!-- no site.author -->{% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="canonical" href="{{ page.url | canonical }}" />
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/fira-sans.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/base.css" type="text/css" />
+    {% if page.css %}<link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.css }}.css" type="text/css" />{% endif %}
+
+    <!--
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.url }}/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.url }}/rss.xml" />
+    -->
 </head>
 
+
 <body>{% unless site.url %}missing site.url{% endunless %}{% unless site.title %}missing site.title{% endunless %}{% unless site.author %}missing site.author{% endunless %}{% unless site.email %}missing site.email{% endunless %}
-<div id="container">
-{{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
-</div> <!-- /#container -->
 
-{% for js in site.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
-{% endfor %}{% for js in page.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
-{% endfor %}
+    <header>
+        <h1><a href="{{ site.baseurl }}/">pddds</a></h1>
+        <nav class="mobile-jump"><a class="button" href="#about">About ↓</a></nav>
+    </header>
 
-<script type="text/javascript" src="{% if site.root %}{{ site.root }}{% endif %}/js/fontfaceobserver.js"></script>
+    <div id="page">
+        <main>
+        {{ content | replace:'&#8230;','<span class="hellip">&#8230;</span>'}}
+        </main>
+
+        <aside id="about">
+            {% capture about %}{% include about.md %}{% endcapture %}
+            {{ about | markdownify | replace:' id="about"','' }}
+            <p class="mobile-jump"><a href="#top">Top ↑</a></p>
+        </aside>
+    </div>
+
+    <footer>
+        <p id="copyright" title="{{site.time}}">
+            &copy; {{ site.author }} {{ site.time | date: "%Y" }}
+        </p>
+    </footer>
+
+<script type="text/javascript" src="{{ site.baseurl }}/js/fontfaceobserver.js"></script>
 <script type="text/javascript">
 let font800 = new FontFaceObserver('Fira Sans', { weight: 800 });
 let font700 = new FontFaceObserver('Fira Sans', { weight: 700 });
@@ -43,8 +77,23 @@ Promise.all([font800.load(), font700.load(), font500.load()])
     });
 </script>
 
+{% for js in page.js %}    <script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
+{% endfor %}
+
 {% if jekyll.environment == "development" %}
 <script type="text/javascript" src="http://livejs.com/live.js"></script>
 {% else %}
-{% include analytics.html %}
+{% if site.googleanalytics %}<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.googleanalytics }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>{% endif %}
 {% endif %}

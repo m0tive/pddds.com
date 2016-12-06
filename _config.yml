@@ -1,6 +1,6 @@
 highlighter: true
 
-permalink: /blog/:categories/:title.html
+permalink: /blog/:categories/:year/:month/:title
 
 title: pddds
 subtitle: "new site, coming soon"
@@ -11,7 +11,7 @@ email: "peter+at+pddds+com"
 googleanalytics: "UA-2993227-8"
 
 exclude:
-    - "_*"
+    - "_libs"
     - README.md
     - "Gemfile*"
     - "*.sh"
@@ -20,3 +20,17 @@ keep_files:
     - wip
 
 timezone: Europe/London
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: "base"
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "post"
