@@ -1,5 +1,4 @@
 ---
-title: index
 ---
 
 <em>Latest things...</em>
