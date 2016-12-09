@@ -295,3 +295,12 @@ hr {
         font-size: 4em;
     }
 }
+
+{% include desert-code.css %}
+
+pre > code {
+    overflow: auto;
+    padding: 1em;
+    font-size: smaller;
+    border-radius: 3px;
+}

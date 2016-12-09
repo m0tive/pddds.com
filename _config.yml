@@ -10,6 +10,8 @@ email: "peter+at+pddds+com"
 
 googleanalytics: "UA-2993227-8"
 
+highlighter: rouge
+
 exclude:
     - "_libs"
     - README.md

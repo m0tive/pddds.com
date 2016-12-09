@@ -1,4 +1,4 @@
-pre code { background: #333; color: white }
+pre code { background: #333; color: white; display: block }
 code .c1 {color: skyblue }
 code .se {color: navajowhite }
 code .s {color: #ffa0a0 }
