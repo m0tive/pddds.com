@@ -1,6 +1,6 @@
 #!/bin/bash
 
-start cmd /c"bundler exec jekyll server --watch"
+start cmd /c"bundler exec jekyll server --watch --drafts"
 
 # wait for server to start
 while ! curl http://localhost:4000/ &>/dev/null; do sleep 1; done
