@@ -1,30 +1,28 @@
-pddds.com
-=========
+[pddds.com][]
+=============
 
-This is the [jekyll][] source for [pddds.com][], Peter Dodds' personal website.
+A website by Peter Dodds, for his general amusement.
+
+
+About
+-----
+Built using [jekyll][], [markdown][], [sass][], and the usual html/css/js wizardry.
+
+Currently, and forever, a work-in-progress.
+
 
 Licence
 -------
 
-The following directories and their contents copyright &copy; Peter Dodds,
-
-* \_posts/
-* lib/images
+Post content, images\*, and design I retain copyright &copy;.
 
 Everything else is MIT Licensed. Attribution is always appreciated.
 
-Notes
------
+_\* The oak background was originally saved from a website in 2010, which I
+have long since lost the link to. If you made it, email me._
 
-When starting, some parts of the jekyll code was sourced from Scott Kyle's [AppDen sourcecode][appden].
 
-Some ideas came from Vito Botta's article ["Migrating from Wordpress to Jekyll - Part 2"][vitobotta], and the rss and atom templates came from [coyled][].
-
-Also, this uses a edited version of [html5reset][].
-
-[jekyll]: http://jekyllrb.com
+[markdown]: https://daringfireball.net/projects/markdown/
+[sass]: http://sass-lang.com
+[jekyll]: https://jekyllrb.com
 [pddds.com]: http://pddds.com
-[appden]: http://github.com/appden/appden.github.com
-[vitobotta]: http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ "Migrating from Wordpress to Jekyll - Part 2: **Everything** you need to know about Jekyll"
-[coyled]: http://coyled.com/2010/07/05/jekyll-templates-for-atom-rss/ "coyled.com > Jekyll Templates for Atom, RSS"
-[html5reset]: http://html5reset.org/ "HTML5 Reset"
