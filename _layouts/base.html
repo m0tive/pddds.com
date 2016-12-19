@@ -61,6 +61,7 @@
 
     <footer>
         <p id="copyright" title="{{site.time}}">
+            {% if site.buildid %}{{site.buildid}}{% else %}???-?-g?????{% endif %}
             &copy; {{ site.author }} {{ site.time | date: "%Y" }}
         </p>
     </footer>
