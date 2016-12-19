@@ -276,7 +276,9 @@ body > footer {
     > p {
         font-size: 0.9em;
         text-align: right;
-        @include shadow-text;
+        &, a, a:hover, a:visited {
+            @include shadow-text;
+        }
     }
 }
 

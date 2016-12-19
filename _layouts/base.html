@@ -60,8 +60,12 @@
     </div>
 
     <footer>
-        <p id="copyright" title="{{site.time}}">
-            &copy; {{ site.author }} {{ site.time | date: "%Y" }}
+        <p>
+            {% capture buildid %}{% if site.buildid %}{{site.buildid}}{% else %}???-?-g?????{% endif %}{% endcapture %}
+            <a href="https://github.com/m0tive/pddds.com/tree/{{ buildid }}">{{buildid}}</a>
+            &copy;
+            {% include email.html text="Peter Dodds" %}
+            <span title="{{site.time}}">{{ site.time | date: "%Y" }}</span>
         </p>
     </footer>
 

@@ -8,5 +8,4 @@ _Peter Dodds_ is a software developer, UX master-in-training, design
 enthusiast, aspiring illustrator and optimistic gardener. He tries to
 do too many thing, but is getting better at it.
 
-<a href="mailto:hello~at~pddds.com" onmouseover="this.href=this.href.replace(/~at~/,'@')">
-    Email Peter</a>
+{% include email.html text="Email Peter" %}
