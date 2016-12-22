@@ -305,6 +305,18 @@ pre > code {
     padding: 1em;
     font-size: smaller;
     border-radius: 3px;
+    @media all and (max-width: 450px)
+    {
+        font-size:0.7em;
+    }
+}
+
+@media all and (max-width: 768px)
+{
+    figure {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
 }
 
 p code {
