@@ -247,6 +247,10 @@ a {
 #page > main > hr { margin: 1em 0 1em; }
 
 article {
+    hr {
+        margin-right: 2em;
+        margin-left: 2em;
+    }
     > header {
         margin: 0 0 1em;
         > h2, > h1 {
