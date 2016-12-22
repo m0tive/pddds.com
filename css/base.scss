@@ -260,6 +260,11 @@ article {
             font-size: smaller;
         }
     }
+    > footer {
+        padding-top: 1em;
+        @include shadow-text;
+    }
+    padding-bottom: 1em;
 }
 
 body > footer {

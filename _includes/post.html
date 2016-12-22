@@ -19,5 +19,9 @@
         {{ include.post.content }}
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>
+            - {% if include.post.author %}{{ include.post.author }}{% else %}Peter{% endif %}
+        </p>
+    </footer>
 </article>
