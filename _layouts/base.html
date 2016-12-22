@@ -55,7 +55,7 @@
         <aside id="about">
             {% capture about %}{% include about.md %}{% endcapture %}
             {{ about | markdownify | replace:' id="about"','' }}
-            <p class="mobile-jump"><a href="#top">Top ↑</a></p>
+            <p class="mobile-jump"><a class="button" href="#top">Top ↑</a></p>
         </aside>
     </div>
 
