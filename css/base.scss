@@ -192,7 +192,7 @@ a {
         padding: 0 1em;
         @include border-shadow(left, right);
 
-        :first-child{
+        > :first-child{
             margin-top: 0;
         }
     }
