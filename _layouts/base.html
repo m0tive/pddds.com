@@ -61,8 +61,11 @@
 
     <footer>
         <p>
-            {% capture buildid %}{% if site.buildid %}{{site.buildid}}{% else %}???-?-g?????{% endif %}{% endcapture %}
+        {% if site.buildid %}
+            {% capture buildid %}{% if site.buildid %}{{site.buildid}}{% else %}master{% endif %}{% endcapture %}
             <a href="https://github.com/m0tive/pddds.com/tree/{{ buildid }}">{{buildid}}</a>
+            {% else %}{% if jekyll.environment == "development" %}<a href="http://pddds.com" style="color: red">live site</a>{% endif %}
+            {% endif %}
             &copy;
             {% include email.html text="Peter Dodds" %}
             <span title="{{site.time}}">{{ site.time | date: "%Y" }}</span>
