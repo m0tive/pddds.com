@@ -325,4 +325,6 @@ p code {
     background-color: darken($backgroundCol, 5%);
     border-radius: 3px;
     border: 1px solid $shadowCol;
+    font-size: 0.9em;
+    padding: 0.05em 0.3em;
 }
