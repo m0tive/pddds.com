@@ -202,6 +202,7 @@ a {
         padding-left:0;
         border-left:0;
         order: 1;
+        width: 0%; // hack to fix main width on FF
     }
 
     > aside {
@@ -234,6 +235,7 @@ a {
 
         > main {
             border-top: 0;
+            width: unset; // remove flex hack
         }
         > aside {
             border-bottom: 0;
