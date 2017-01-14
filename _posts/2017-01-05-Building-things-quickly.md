@@ -4,7 +4,7 @@ title: "Building Things, Quickly"
 
 _This is part 2 of my -- sometimes rambling -- review of building the latest
 iteration of_ pddds. _In part 1 I [reviewed the tech,
-tools and features I used](blog/2016/12/Shiny)._
+tools and features I used](/blog/2016/12/Shiny)._
 
 ---
 
