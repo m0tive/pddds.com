@@ -1,0 +1,10 @@
+---
+layout: none
+---
+{ "posts" : [{% for post in site.posts %}
+{ "title": "{{ post.title }}",
+  "url": "{{ post.url | prepend:site.baseurl }}",
+  "date": "{{ post.date }}",
+},
+{% endfor %}],
+}
