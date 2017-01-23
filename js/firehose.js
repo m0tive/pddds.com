@@ -17,6 +17,24 @@ function buildFirehose(id) {
     // TODO
     //request.onerror = function() { };
     request.send();
+
+    getScript(SITE_BASEURL + "/js/twitterFetcher.js", function() {
+
+        twitterFetcher.fetch({
+          "profile": {"screenName": 'm0tive'},
+          "dataOnly": true,
+          "customCallback": function(tweets) {
+              console.log(tweets);
+              let list = document.getElementById(id);
+              for (let post of tweets) {
+                  // TODO - use data-expanded-url instead of href on anchors
+                  let item = document.createElement("li");
+                  item.innerHTML = post.tweet;
+                  list.appendChild(item);
+              }
+          },
+        });
+    });
 }
 
 function onPostsLoaded(id, posts) {
