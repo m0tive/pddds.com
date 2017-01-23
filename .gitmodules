@@ -4,3 +4,6 @@
 [submodule "_libs/fira"]
 	path = _libs/fira
 	url = https://github.com/mozilla/Fira.git
+[submodule "_libs/twitterApi"]
+	path = _libs/twitterApi
+	url = https://github.com/jasonmayes/Twitter-Post-Fetcher.git
