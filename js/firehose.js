@@ -23,14 +23,28 @@ function buildFirehose(id) {
         twitterFetcher.fetch({
           "profile": {"screenName": 'pdddddds'},
           "dataOnly": true,
+          "showImages": true,
           "customCallback": function(tweets) {
-              console.log(tweets);
               let list = document.getElementById(id);
               for (let post of tweets) {
                   // TODO - use data-expanded-url instead of href on anchors
                   let item = document.createElement("li");
+                  item.className = "tweet";
                   item.innerHTML = post.tweet;
                   list.appendChild(item);
+
+                  if (post.image !== undefined)
+                  {
+                      let imageFrame = document.createElement("div");
+                      imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
+
+                      let image = document.createElement("img");
+                      image.src = post.image;
+                      image.style = "width: 100%;";
+                      imageFrame.appendChild(image);
+
+                      item.appendChild(imageFrame);
+                  }
               }
           },
         });
