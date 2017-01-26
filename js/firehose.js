@@ -1,4 +1,5 @@
 // ~
+"use strict";
 
 function buildFirehose(id) {
     // Load the posts json
