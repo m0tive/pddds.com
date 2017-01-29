@@ -11,6 +11,8 @@ function addPost(timestamp, itemBuilder) {
     let date = new Date(timestamp);
     let time = date.getTime();
 
+    if (time < 1440000000000) { return; }
+
     let list = document.getElementById(LIST_ID);
 
     let target;
