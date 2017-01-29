@@ -4,7 +4,8 @@
 let LIST_ID = "";
 
 //-----------------------------------------------------------------------------
-function addPost(timestamp, data) {
+function addPost(timestamp, itemBuilder) {
+
     // loop over items, add them if missing, remove if there's too many
     //
     let date = new Date(timestamp);
@@ -22,8 +23,8 @@ function addPost(timestamp, data) {
 
 
     let item = document.createElement("li");
+    itemBuilder(item);
     item.id = time.toString();
-    item.innerHTML = data.innerHTML;
 
     if (target === undefined) {
         list.appendChild(item);
@@ -43,10 +44,12 @@ function loadPosts() {
         if (this.status >= 200 && this.status < 400) {
             let data = JSON.parse(this.response);
             for (let post of data.posts) {
-                addPost(post.timestamp, {
-                    "className": "tweet",
-                    "innerHTML": post.title,
-                    "image": post.image
+                addPost(post.timestamp, function(item) {
+                    let link = document.createElement("a");
+                    link.href = post.url;
+                    link.innerHTML = post.title;
+                    item.appendChild(link);
+                    item.className = "post";
                 });
             }
         }
@@ -64,34 +67,28 @@ function loadTweets() {
             "dataOnly": true,
             "showImages": true,
             "customCallback": function(tweets) {
-                //let list = document.getElementById(id);
                 for (let post of tweets) {
-                    addPost(post.timestamp, {
-                        "className": "tweet",
-                        "innerHTML": post.tweet,
-                        "image": post.image
-                    });
+                    addPost(post.timestamp, function(item) {
+                        // TODO - use data-expanded-url instead of href on anchors
+                        item.innerHTML = post.tweet;
+                        if (post.image !== undefined)
+                        {
+                            let imageFrame = document.createElement("div");
+                            imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
 
-                    /*
-                    // TODO - use data-expanded-url instead of href on anchors
-                    let item = document.createElement("li");
-                    item.className = "tweet";
-                    item.innerHTML = post.tweet;
-                    list.appendChild(item);
+                            let image = document.createElement("img");
+                            image.src = post.image;
+                            image.style = "width: 100%;";
+                            imageFrame.appendChild(image);
 
-                    if (post.image !== undefined)
-                    {
-                        let imageFrame = document.createElement("div");
-                        imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
-
-                        let image = document.createElement("img");
-                        image.src = post.image;
-                        image.style = "width: 100%;";
-                        imageFrame.appendChild(image);
-
-                        item.appendChild(imageFrame);
-                    }
-                    */
+                            item.appendChild(imageFrame);
+                        }
+                        let link = document.createElement("a");
+                        link.innerText = "Twitter";
+                        link.href = post.permalinkURL;
+                        item.appendChild(link);
+                        item.className = "tweet";
+                    })
                 }
             },
         });
