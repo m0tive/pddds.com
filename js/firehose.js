@@ -95,7 +95,7 @@ function buildFirehose(id) {
 function onPostsLoaded(id, posts) {
     //let list = document.getElementById(id);
     for (let post of posts) {
-        addPost(post.date, {
+        addPost(post.timestamp, {
             "className": "tweet",
             "innerHTML": post.title,
             "image": post.image
