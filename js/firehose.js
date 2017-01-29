@@ -3,6 +3,7 @@
 
 let LIST_ID = "";
 
+//-----------------------------------------------------------------------------
 function addPost(timestamp, data) {
     // loop over items, add them if missing, remove if there's too many
     //
@@ -23,6 +24,7 @@ function addPost(timestamp, data) {
     let item = document.createElement("li");
     item.id = time.toString();
     item.innerHTML = data.innerHTML;
+
     if (target === undefined) {
         list.appendChild(item);
     }
@@ -31,9 +33,8 @@ function addPost(timestamp, data) {
     }
 }
 
-function buildFirehose(id) {
-    LIST_ID = id;
-
+//-----------------------------------------------------------------------------
+function loadPosts() {
     // Load the posts json
     let request = new XMLHttpRequest();
     request.open('Get', '/data/posts.json', true/*async*/);
@@ -41,16 +42,21 @@ function buildFirehose(id) {
     request.onload = function() {
         if (this.status >= 200 && this.status < 400) {
             let data = JSON.parse(this.response);
-            onPostsLoaded(id, data.posts);
-        } else {
-            // TODO
+            for (let post of data.posts) {
+                addPost(post.timestamp, {
+                    "className": "tweet",
+                    "innerHTML": post.title,
+                    "image": post.image
+                });
+            }
         }
     };
 
-    // TODO
-    //request.onerror = function() { };
     request.send();
+}
 
+//-----------------------------------------------------------------------------
+function loadTweets() {
     getScript(SITE_BASEURL + "/js/twitterFetcher.js", function() {
 
         twitterFetcher.fetch({
@@ -92,19 +98,10 @@ function buildFirehose(id) {
     });
 }
 
-function onPostsLoaded(id, posts) {
-    //let list = document.getElementById(id);
-    for (let post of posts) {
-        addPost(post.timestamp, {
-            "className": "tweet",
-            "innerHTML": post.title,
-            "image": post.image
-        });
+//-----------------------------------------------------------------------------
+function buildFirehose(id) {
+    LIST_ID = id;
 
-        /*
-        let item = document.createElement("li");
-        item.innerText = post.title;
-        list.appendChild(item);
-        */
-    }
+    loadPosts();
+    loadTweets();
 }
