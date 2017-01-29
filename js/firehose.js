@@ -3,14 +3,32 @@
 
 let LIST_ID = "";
 
-function addPost(time, data) {
+function addPost(timestamp, data) {
     // loop over items, add them if missing, remove if there's too many
+    //
+    let date = new Date(timestamp);
+    let time = date.getTime();
 
     let list = document.getElementById(LIST_ID);
+
+    let target;
+    for (let child = list.firstChild; child !== null; child = child.nextSibling) {
+        if (Number(child.id) < time) {
+            target = child;
+            break;
+        }
+    }
+
+
     let item = document.createElement("li");
     item.id = time.toString();
     item.innerHTML = data.innerHTML;
-    list.appendChild(item);
+    if (target === undefined) {
+        list.appendChild(item);
+    }
+    else {
+        list.insertBefore(item, target);
+    }
 }
 
 function buildFirehose(id) {
@@ -42,7 +60,7 @@ function buildFirehose(id) {
             "customCallback": function(tweets) {
                 //let list = document.getElementById(id);
                 for (let post of tweets) {
-                    addPost(new Date(post.timestamp).getTime(), {
+                    addPost(post.timestamp, {
                         "className": "tweet",
                         "innerHTML": post.tweet,
                         "image": post.image
@@ -77,8 +95,7 @@ function buildFirehose(id) {
 function onPostsLoaded(id, posts) {
     //let list = document.getElementById(id);
     for (let post of posts) {
-        let date = new Date(post.date);
-        addPost(date.getTime(), {
+        addPost(post.date, {
             "className": "tweet",
             "innerHTML": post.title,
             "image": post.image
