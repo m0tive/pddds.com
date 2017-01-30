@@ -3,7 +3,11 @@
 
 _The firehose_
 
-<ol id="firehose-list"></ol>
+<ol id="firehose-list">{% for post in site.posts %}
+  <li id="{{ post.date | date: "%s%3N" }}">
+  <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+  </li>
+{% endfor %}</ol>
 
 <script type="text/javascript">
 const SITE_BASEURL = "{{ site.baseurl }}";

@@ -37,30 +37,6 @@ function addPost(timestamp, itemBuilder) {
 }
 
 //-----------------------------------------------------------------------------
-function loadPosts() {
-    // Load the posts json
-    let request = new XMLHttpRequest();
-    request.open('Get', '/data/posts.json', true/*async*/);
-
-    request.onload = function() {
-        if (this.status >= 200 && this.status < 400) {
-            let data = JSON.parse(this.response);
-            for (let post of data.posts) {
-                addPost(post.timestamp, function(item) {
-                    let link = document.createElement("a");
-                    link.href = post.url;
-                    link.innerHTML = post.title;
-                    item.appendChild(link);
-                    item.className = "post";
-                });
-            }
-        }
-    };
-
-    request.send();
-}
-
-//-----------------------------------------------------------------------------
 function loadTweets() {
     getScript(SITE_BASEURL + "/js/twitterFetcher.js", function() {
 
@@ -100,7 +76,5 @@ function loadTweets() {
 //-----------------------------------------------------------------------------
 function buildFirehose(id) {
     LIST_ID = id;
-
-    loadPosts();
     loadTweets();
 }
