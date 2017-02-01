@@ -6,7 +6,13 @@ _A slow drizzel..._
 
 <ol id="firehose-list">{% for post in site.posts %}
   <li id="{{ post.date | date: "%s%3N" }}" class="blog">
-  <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+  <h2><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h2>
+  <abbr class="published" title="{{ include.post.date }}">
+    <a href="{{ include.post.url | prepend:site.baseurl }}">
+      {{ post.date | date:'%b %d %Y' }}
+    </a>
+  </abbr>
+  {% if post.summary %}<p class="post-summary">{{ post.summary }}</p>{% endif %}
   </li>
 {% endfor %}</ol>
 
