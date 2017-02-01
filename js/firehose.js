@@ -54,10 +54,15 @@ function loadTweets() {
                             let imageFrame = document.createElement("div");
                             imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
 
+                            let link = document.createElement("a");
+                            link.href = post.permalinkURL;
+
                             let image = document.createElement("img");
                             image.src = post.image;
                             image.style = "width: 100%;";
-                            imageFrame.appendChild(image);
+                            link.appendChild(image);
+
+                            imageFrame.appendChild(link);
 
                             item.appendChild(imageFrame);
                         }
