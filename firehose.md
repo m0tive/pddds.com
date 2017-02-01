@@ -1,10 +1,11 @@
 ---
+css: firehose
 ---
 
 _A slow drizzel..._
 
 <ol id="firehose-list">{% for post in site.posts %}
-  <li id="{{ post.date | date: "%s%3N" }}">
+  <li id="{{ post.date | date: "%s%3N" }}" class="blog">
   <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
   </li>
 {% endfor %}</ol>
