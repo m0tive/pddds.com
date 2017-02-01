@@ -1,7 +1,7 @@
 ---
 ---
 
-_The firehose_
+_A slow drizzel..._
 
 <ol id="firehose-list">{% for post in site.posts %}
   <li id="{{ post.date | date: "%s%3N" }}">
