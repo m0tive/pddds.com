@@ -36,3 +36,6 @@ defaults:
             type: "posts"
         values:
             layout: "post"
+
+sass:
+    sass_dir: css/_sass

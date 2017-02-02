@@ -1,0 +1,26 @@
+$purple: #8D205A;
+$green:#5f9252;
+
+$lightwood:#9E713A;
+$darkwood:#7B5030;
+
+$linkCol:$green;
+$linkHoverCol:$purple;
+$linkVistedCol:darken($linkCol, 20%);
+
+$highlightCol:rgba(255, 255, 255, 0.3);
+$shadowCol:rgba(0, 0, 0, 0.1);
+
+$backgroundCol:darken(white, 4%);
+$textCol:black;
+$lightTextCol:rgba(0, 0, 0, 0.25);
+
+@mixin border-shadow($highlight, $shadow) {
+    border-#{$highlight}: 1px solid $highlightCol;
+    border-#{$shadow}: 1px solid $shadowCol;
+}
+
+@mixin shadow-text {
+    color: $lightTextCol;
+    text-shadow: 1px 1px 0px white;
+}
