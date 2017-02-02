@@ -5,16 +5,18 @@ css: firehose
 <p><em>A slow drizzel...</em></p>
 
 <ol id="firehose-list">{% for post in site.posts %}
-  <li id="{{ post.date | date: "%s%3N" }}" class="blog">
-  <h2><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h2>
-  <abbr class="published" title="{{ include.post.date }}">
-    <a href="{{ include.post.url | prepend:site.baseurl }}">
-      {{ post.date | date:'%b %d %Y' }}
-    </a>
-  </abbr>
-  {% if post.summary %}<p class="post-summary">{{ post.summary }}</p>{% endif %}
-  </li>
-{% endfor %}</ol>
+    <li id="{{ post.date | date: "%s%3N" }}" class="blog">
+        <div class="info">
+            <h2><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h2>
+            <abbr class="published" title="{{ include.post.date }}">
+                <a href="{{ post.url | prepend:site.baseurl }}">
+                  {{ post.date | date:'%b %d %Y' }}
+                </a>
+            </abbr>
+        </div>{% if post.summary %}
+        <p class="post-summary">{{ post.summary }}</p>{% endif %}
+    </li>{% endfor %}
+</ol>
 
 <script type="text/javascript">
 const SITE_BASEURL = "{{ site.baseurl }}";
