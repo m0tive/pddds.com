@@ -13,8 +13,10 @@ css: firehose
                   {{ post.date | date:'%b %d %Y' }}
                 </a>
             </abbr>
-        </div>{% if post.summary %}
-        <p class="post-summary">{{ post.summary }}</p>{% endif %}
+        </div>
+        <p class="post-summary">
+        {% if post.summary %}{{ post.summary }}{% else %}A dreadfully interesting post about something frightfully relevant and witty{% endif %}
+        </p>
     </li>{% endfor %}
 </ol>
 
