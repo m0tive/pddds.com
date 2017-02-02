@@ -1,4 +1,5 @@
 ---
+summary: Autumn 2015 with Aereogramme, Iron & Wine, The Books, and many more
 ---
 
 I've been organising my music on Spotify I enjoy listening to into 3-month lists of songs. These are the songs I liked enough to save, in the order I saved them. Most recent saved at the top.

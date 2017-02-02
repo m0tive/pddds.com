@@ -1,5 +1,6 @@
 ---
 title: "Deloying to the server"
+summary: How I setup a git repo on my webserver to build the site on demand
 ---
 
 _This is part 3 of my -- sometimes rambling -- review of building the latest

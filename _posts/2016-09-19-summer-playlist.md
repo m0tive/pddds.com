@@ -1,4 +1,5 @@
 ---
+summary: Summer 2016 with Moderat, Doves, Shearwater, and many more
 ---
 
 June, July, and August

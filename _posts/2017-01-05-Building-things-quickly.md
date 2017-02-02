@@ -1,5 +1,6 @@
 ---
 title: "Building Things, Quickly"
+summary: A quick and dirty live editing setup in whatever editors at hand
 ---
 
 _This is part 2 of my -- sometimes rambling -- review of building the latest
