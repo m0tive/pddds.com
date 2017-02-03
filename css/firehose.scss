@@ -29,6 +29,11 @@
         font-style: italic;
         border: 1px solid lightgrey;
         border-radius: 5px;
+        box-shadow: 0 0 10px 5px #eee;
+
+        &:hover {
+            border-color: #aaa;
+        }
 
         img.icon {
             width: 1em; height: 1em;
