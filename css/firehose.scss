@@ -3,6 +3,8 @@
 
 @import "shared";
 
+@function site_url($url) { @return url("{{ site.baseurl }}#{$url}"); }
+
 #firehose-list {
     list-style: none;
     padding: 0;
@@ -21,6 +23,17 @@
     }
 
     > .tweet {
+        &:before {
+            content: '';
+            background-image: site_url("/img/twitter_icon.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            margin: 0 5px 0 0;
+        }
         margin: 1em 1em 0;
         padding: 0.7em 1em;
         font-size: larger;
