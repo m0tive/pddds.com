@@ -3,6 +3,17 @@
 
 let LIST_ID = "";
 
+const MONTH_LIST = [
+    "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
+]
+
+function formatDate(date) {
+    date = new Date(date);
+    return MONTH_LIST[date.getMonth()]
+        + " " + date.getDate()
+        + " " + date.getFullYear();
+}
+
 //-----------------------------------------------------------------------------
 function addPost(timestamp, itemBuilder) {
 
@@ -67,7 +78,7 @@ function loadTweets() {
                             let pubdate = document.createElement("abbr");
                             pubdate.className = "published";
                             pubdate.title = post.timestamp;
-                            pubdate.innerText = post.timestamp;
+                            pubdate.innerText = formatDate(post.timestamp);
 
                             permalink.appendChild(pubdate);
                         }
