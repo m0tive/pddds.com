@@ -23,23 +23,16 @@
     }
 
     > .tweet {
-        &:before {
-            content: '';
-            background-image: site_url("/img/twitter_icon.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: bottom;
-            width: 1em;
-            height: 1em;
-            display: inline-block;
-            margin: 0 5px 0 0;
-        }
         margin: 1em 1em 0;
         padding: 0.7em 1em;
         font-size: larger;
         font-style: italic;
         border: 1px solid lightgrey;
         border-radius: 5px;
+
+        img.icon {
+            width: 1em; height: 1em;
+        }
     }
 }
 

@@ -47,8 +47,40 @@ function loadTweets() {
             "customCallback": function(tweets) {
                 for (let post of tweets) {
                     addPost(post.timestamp, function(item) {
+                        let info = document.createElement("div");
+                        info.className = "info";
+
+                        let permalink = document.createElement("a");
+                        permalink.href = post.permalinkURL
+
+                        // twitter icon
+                        {
+
+                            let icon = document.createElement("img");
+                            icon.src = SITE_BASEURL + "/img/twitter_icon.svg";
+                            icon.className = "icon";
+                            permalink.appendChild(icon);
+                        }
+
+                        // date
+                        {
+                            let pubdate = document.createElement("abbr");
+                            pubdate.className = "published";
+                            pubdate.title = post.timestamp;
+                            pubdate.innerText = post.timestamp;
+
+                            permalink.appendChild(pubdate);
+                        }
+
+                        info.appendChild(permalink);
+
+                        item.appendChild(info);
+
                         // TODO - use data-expanded-url instead of href on anchors
-                        item.innerHTML = post.tweet;
+                        let container = document.createElement("p");
+                        container.innerHTML = post.tweet;
+                        item.appendChild(container);
+
                         if (post.image !== undefined)
                         {
                             let imageFrame = document.createElement("div");
