@@ -8,7 +8,7 @@ css: firehose
     <li id="{{ post.date | date: "%s%3N" }}" class="blog">
         <div class="info">
             <h2><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h2>
-            <abbr class="published" title="{{ include.post.date }}">
+            <abbr class="published" title="{{ post.date }}">
                 <a href="{{ post.url | prepend:site.baseurl }}">
                   {{ post.date | date:'%b %d %Y' }}
                 </a>
