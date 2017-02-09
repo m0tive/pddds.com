@@ -36,8 +36,21 @@
         border-radius: 5px;
         box-shadow: 0 0 10px 5px #eee;
 
+        overflow:hidden;
+
+        display: flex;
+
         &:hover {
             border-color: #aaa;
+        }
+
+        .imageFrame {
+            width: 200px;
+            height: 100%;
+            margin: -1em -1em -1em 0;
+            overflow: hidden;
+            background-color: red;
+            //img { display:none;}
         }
 
         img.icon {

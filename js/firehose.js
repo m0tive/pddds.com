@@ -58,6 +58,8 @@ function loadTweets() {
             "customCallback": function(tweets) {
                 for (let post of tweets) {
                     addPost(post.timestamp, function(item) {
+                        item.className = "tweet";
+
                         let info = document.createElement("div");
                         info.className = "info";
 
@@ -95,7 +97,8 @@ function loadTweets() {
                         if (post.image !== undefined)
                         {
                             let imageFrame = document.createElement("div");
-                            imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
+                            imageFrame.className = "imageFrame";
+                            //imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
 
                             let link = document.createElement("a");
                             link.href = post.permalinkURL;
@@ -109,11 +112,6 @@ function loadTweets() {
 
                             item.appendChild(imageFrame);
                         }
-                        let link = document.createElement("a");
-                        link.innerText = "Twitter";
-                        link.href = post.permalinkURL;
-                        item.appendChild(link);
-                        item.className = "tweet";
                     })
                 }
             },
