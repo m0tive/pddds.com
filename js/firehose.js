@@ -60,17 +60,8 @@ function loadTweets() {
                     addPost(post.timestamp, function(item) {
                         item.className = "tweet";
 
-                        let info = document.createElement("div");
-                        info.className = "info";
-
-                        // twitter icon
+                        let authorLinkHTML = ""
                         {
-
-                            let icon = document.createElement("img");
-                            icon.src = SITE_BASEURL + "/img/twitter_icon.svg";
-                            icon.className = "icon";
-                            info.appendChild(icon);
-
                             let temp = document.createElement("div");
                             temp.innerHTML = post.author;
 
@@ -79,50 +70,30 @@ function loadTweets() {
                                 let screenName = authorLink.getElementsByClassName('TweetAuthor-screenName')[0];
                                 if (screenName !== undefined) {
                                     authorLink.innerHTML = screenName.innerHTML;
-                                    info.appendChild(authorLink);
+                                    authorLinkHTML = authorLink.outerHTML;
                                 }
                             }
                         }
 
-                        // date
-                        {
-                            let pubdate = document.createElement("abbr");
-                            pubdate.className = "published";
-                            pubdate.title = post.timestamp;
-
-                            let permalink = document.createElement("a");
-                            permalink.href = post.permalinkURL
-                            permalink.innerText = formatDate(post.timestamp);
-
-                            pubdate.appendChild(permalink);
-                            info.appendChild(pubdate);
-                        }
-
-                        item.appendChild(info);
+                        let innerHTML = `<div class="info">
+                            <img src="${SITE_BASEURL}/img/twitter_icon.svg" class="icon" />
+                            ${authorLinkHTML}
+                            <abbr class="published" title="${post.timestamp}">
+                                <a href="${post.permalinkURL}">${formatDate(post.timestamp)}</a>
+                            </abbr>
+                        </div>
+                        <p>${post.tweet}</p>`;
 
                         // TODO - use data-expanded-url instead of href on anchors
-                        let container = document.createElement("p");
-                        container.innerHTML = post.tweet;
-                        item.appendChild(container);
 
                         if (post.image !== undefined)
                         {
-                            let imageFrame = document.createElement("div");
-                            imageFrame.className = "imageFrame";
-                            //imageFrame.style = "width: 100px; height: 100px; overflow: hidden;";
-
-                            let link = document.createElement("a");
-                            link.href = post.permalinkURL;
-
-                            let image = document.createElement("img");
-                            image.src = post.image;
-                            image.style = "width: 100%;";
-                            link.appendChild(image);
-
-                            imageFrame.appendChild(link);
-
-                            item.appendChild(imageFrame);
+                            innerHTML += `<div class="imageFrame">
+                                <a href="${post.permalinkURL}"><img src="${post.image}"/></a>
+                            </div>`;
                         }
+
+                        item.innerHTML = innerHTML;
                     })
                 }
             },
