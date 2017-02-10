@@ -15,7 +15,7 @@
             display: flex;
             align-items: baseline;
 
-            abbr { margin-left: 1em; }
+            abbr { margin-left: 0.5em; }
 
             h2 { margin-bottom: 0; }
         }
@@ -30,15 +30,20 @@
     > .tweet {
         margin: 1em 1em 1em;
         padding: 0.7em 1em;
-        font-size: larger;
-        font-style: italic;
+        p {
+            font-family:Georgia;
+            color: #444;
+            margin: 0.5em 0 0.3em;
+            font-size: larger;
+            font-style: italic;
+        }
         border: 1px solid lightgrey;
         border-radius: 5px;
         box-shadow: 0 0 10px 5px #eee;
 
         overflow:hidden;
 
-        display: flex;
+        //display: flex;
 
         &:hover {
             border-color: #aaa;
@@ -47,14 +52,16 @@
         .imageFrame {
             width: 200px;
             height: 100%;
-            margin: -1em -1em -1em 0;
+            //margin: -1em -1em -1em 0;
             overflow: hidden;
-            background-color: red;
+            //background-color: red;
             //img { display:none;}
         }
 
         img.icon {
-            width: 1em; height: 1em;
+            width: 1em; height: 1.0em;
+            margin: 0 0.4em 0 0;
+            vertical-align:middle;
         }
     }
 }
