@@ -63,16 +63,25 @@ function loadTweets() {
                         let info = document.createElement("div");
                         info.className = "info";
 
-                        let permalink = document.createElement("a");
-                        permalink.href = post.permalinkURL
-
                         // twitter icon
                         {
 
                             let icon = document.createElement("img");
                             icon.src = SITE_BASEURL + "/img/twitter_icon.svg";
                             icon.className = "icon";
-                            permalink.appendChild(icon);
+                            info.appendChild(icon);
+
+                            let temp = document.createElement("div");
+                            temp.innerHTML = post.author;
+
+                            let authorLink = temp.getElementsByClassName('TweetAuthor-link')[0];
+                            if (authorLink !== undefined) {
+                                let screenName = authorLink.getElementsByClassName('TweetAuthor-screenName')[0];
+                                if (screenName !== undefined) {
+                                    authorLink.innerHTML = screenName.innerHTML;
+                                    info.appendChild(authorLink);
+                                }
+                            }
                         }
 
                         // date
@@ -80,12 +89,14 @@ function loadTweets() {
                             let pubdate = document.createElement("abbr");
                             pubdate.className = "published";
                             pubdate.title = post.timestamp;
-                            pubdate.innerText = formatDate(post.timestamp);
 
-                            permalink.appendChild(pubdate);
+                            let permalink = document.createElement("a");
+                            permalink.href = post.permalinkURL
+                            permalink.innerText = formatDate(post.timestamp);
+
+                            pubdate.appendChild(permalink);
+                            info.appendChild(pubdate);
                         }
-
-                        info.appendChild(permalink);
 
                         item.appendChild(info);
 
