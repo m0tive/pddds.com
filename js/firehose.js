@@ -89,11 +89,20 @@ function loadTweets() {
                         if (post.image !== undefined)
                         {
                             innerHTML += `<div class="imageFrame">
-                                <a href="${post.permalinkURL}"><img src="${post.image}"/></a>
+                                <a href="${post.permalinkURL}"><img class="image" src="${post.image}"/></a>
                             </div>`;
                         }
 
                         item.innerHTML = innerHTML;
+
+                        let img = item.getElementsByClassName("image")[0];
+                        if (img !== undefined)
+                        {
+                            img.onload = function() {
+                                img.style = `position:relative; top: -${(img.height-200)/2}px`;
+                            };
+                            window.addEventListener("resize", img.onload);
+                        }
                     })
                 }
             },
